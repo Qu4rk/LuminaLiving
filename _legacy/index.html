@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Limassol Circuit | Exclusive Semi-Long Term Rental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Outfit for body, Playfair Display for ultra-premium headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="porsche">
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-text">Igniting the Engine...</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo magnetic">THE LIMASSOL CIRCUIT</div>
+        <ul class="nav-links">
+            <li><a href="#experience" class="magnetic-link">The Experience</a></li>
+            <li><a href="#location" class="magnetic-link">Location</a></li>
+            <li><a href="#gallery" class="magnetic-link">Gallery</a></li>
+            <li><a href="#inquire" class="btn-primary nav-btn magnetic">Inquire</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/12049389_3840_2160_25fps.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="line-wrap"><span class="line">Driven by Design.</span></span>
+                <span class="line-wrap"><span class="line">Defined by Location.</span></span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="line-wrap"><span class="line">An exclusive 80sqm sanctuary across three floors.</span></span>
+                <span class="line-wrap"><span class="line">Tailored for the automotive enthusiast.</span></span>
+            </p>
+            <div class="hero-scroll-indicator">
+                <span class="scroll-line"></span>
+                <span>Scroll</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Elyse-style Large Typography Statement -->
+    <section class="section statement">
+        <div class="container">
+            <h2 class="huge-text reveal-text">
+                Not just a residence. <br>
+                <span class="italic-serif">A tailored lifestyle.</span> <br>
+                Designed for those who appreciate the finer details.
+            </h2>
+        </div>
+    </section>
+
+    <!-- Overview Section (The Experience) with Sticky Image -->
+    <section class="section experience" id="experience">
+        <div class="container layout-grid sticky-layout">
+            <div class="image-block pin-image">
+                <div class="image-reveal-wrapper">
+                    <img src="assets/longphoto.jpg" alt="Limassol Views" class="parallax-img-inner">
+                </div>
+            </div>
+            <div class="text-block scroll-content">
+                <div class="experience-item">
+                    <span class="amenity-number">01</span>
+                    <h3 class="serif-title">Personalized Themes</h3>
+                    <p>Select your automotive inspiration. Porsche, Ferrari, or Lamborghini—our interior adapts to your passion.</p>
+                </div>
+                <div class="experience-item">
+                    <span class="amenity-number">02</span>
+                    <h3 class="serif-title">The Coffee Station</h3>
+                    <p>A dedicated high-end barista setup for the true connoisseur. Start your morning overlooking the Mediterranean.</p>
+                </div>
+                <div class="experience-item">
+                    <span class="amenity-number">03</span>
+                    <h3 class="serif-title">Absolute Comfort</h3>
+                    <p>4 integrated AC units, optimized natural air circulation, and noise-canceling windows for ultimate privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalization Program Teaser -->
+    <section class="section personalization" id="personalization">
+        <div class="container">
+            <div class="personalization-header">
+                <h2 class="section-title reveal-text">The Personalization</h2>
+                <p class="reveal-text">Select an aesthetic theme to tailor your experience.</p>
+            </div>
+            
+            <div class="theme-selector fade-in-up">
+                <button class="theme-btn active magnetic" data-target-theme="porsche">
+                    <span class="brand">Porsche</span>
+                    <span class="vibe">Timeless & Pure</span>
+                </button>
+                <button class="theme-btn magnetic" data-target-theme="ferrari">
+                    <span class="brand">Ferrari</span>
+                    <span class="vibe">Passionate & Bold</span>
+                </button>
+                <button class="theme-btn magnetic" data-target-theme="lamborghini">
+                    <span class="brand">Lamborghini</span>
+                    <span class="vibe">Aggressive & Raw</span>
+                </button>
+            </div>
+            
+            <div class="theme-showcase fade-in-up">
+                <div class="theme-accent-bar"></div>
+                <h3 class="theme-name-display serif-title">Porsche Inspired</h3>
+                <p class="theme-desc-display">A refined balance of profound black, pure white, and racing red accents, embodying the spirit of Stuttgart.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Location Image -->
+    <section class="section full-image location-transition">
+        <div class="image-reveal-wrapper full-width">
+            <img src="assets/paraliakos.png" alt="Coastal Road" class="scale-img">
+        </div>
+        <h2 class="overlay-text">The Coast</h2>
+    </section>
+
+    <!-- Location & Lifestyle -->
+    <section class="section location" id="location">
+        <div class="container layout-grid">
+            <div class="text-block">
+                <h2 class="section-title reveal-text">Prime Location</h2>
+                <p class="lead-text reveal-text">Situated in the heart of Limassol's vibrant coastal area. Steps from the sea.</p>
+                
+                <ul class="elegant-list">
+                    <li class="reveal-text">
+                        <h4>The Coastal Road</h4>
+                        <p>Perfect for an evening drive along the Mediterranean.</p>
+                    </li>
+                    <li class="reveal-text">
+                        <h4>Beach Access</h4>
+                        <p>Just steps away from the sand and sea.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="map-block map-reveal">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13038.571434912232!2d33.0425714!3d34.6806714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e7330045f20613%3A0x95973752e2f38dcd!2sLimassol%2C%20Cyprus!5e0!3m2!1sen!2sus!4v1717621234567!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(90%) contrast(1.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Scrolling Gallery (Elyse Style) -->
+    <section class="section gallery-wrap" id="gallery">
+        <div class="container">
+            <h2 class="section-title reveal-text">The Vibe</h2>
+        </div>
+        <div class="gallery-scroll-container">
+            <div class="gallery-track">
+                <div class="gallery-item"><img src="assets/molos.jpeg" alt="Molos Area"></div>
+                <div class="gallery-item"><img src="assets/oldport.png" alt="Old Port"></div>
+                <div class="gallery-item"><img src="assets/marina1.png" alt="Marina"></div>
+                <div class="gallery-item"><img src="assets/sunset.jpg" alt="Sunset"></div>
+                <div class="gallery-item coming-soon-card">
+                    <span class="serif-title">3D Renders<br>Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquire / Footer -->
+    <section class="section inquire" id="inquire">
+        <div class="container">
+            <div class="inquire-content">
+                <h2 class="huge-text reveal-text">Secure Your Stay</h2>
+                <p class="reveal-text">Private rental only. Minimum 30 days, maximum 6 months.<br>Premium rates apply to shorter stays.</p>
+                
+                <form class="inquire-form fade-in-up">
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-row">
+                        <select>
+                            <option value="">Preferred Theme (Optional)</option>
+                            <option value="porsche">Porsche Inspired</option>
+                            <option value="ferrari">Ferrari Inspired</option>
+                            <option value="lamborghini">Lamborghini Inspired</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary submit-btn magnetic">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-logo logo">THE LIMASSOL CIRCUIT</div>
+            <div class="contact-links">
+                <a href="#" class="magnetic-link">WhatsApp</a>
+                <a href="#" class="magnetic-link">Instagram</a>
+                <a href="#" class="magnetic-link">Email</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 The Limassol Circuit. All Rights Reserved.</p>
+            <p class="disclaimer">Not affiliated with Porsche, Ferrari, or Lamborghini.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP for amazing Elyse-like animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
