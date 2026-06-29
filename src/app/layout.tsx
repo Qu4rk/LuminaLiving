@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "The Limassol Circuit — Private Coastal Residence",
   description:
-    "A private three-level residence on the Limassol shoreline. Considered interiors, coastal proximity, extended stays of one month or longer.",
+    "A private three-level residence on the Limassol shoreline. Considered interiors, coastal proximity, curated stays from 3 days to a full year.",
 };
 
 export default function RootLayout({

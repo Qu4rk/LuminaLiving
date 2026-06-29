@@ -163,8 +163,8 @@ input, select, textarea { font-family: var(--font-body); }
 }
 
 .btn-primary:hover {
-    background: var(--accent);
-    border-color: var(--accent);
+    background: #00FF33;
+    border-color: #00FF33;
     color: var(--bg);
 }
 
@@ -220,6 +220,17 @@ input, select, textarea { font-family: var(--font-body); }
     letter-spacing: 0.15em;
     color: #fff;
     justify-self: start;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), text-shadow 0.35s ease, color 0.35s ease;
+}
+
+.logo:hover {
+    transform: skewX(-18deg) translateX(8px);
+    color: #fff;
+    text-shadow:
+      -6px 0 0 rgba(174, 226, 255, 0.8),
+      -12px 0 0 rgba(174, 226, 255, 0.6),
+      -18px 0 0 rgba(174, 226, 255, 0.4),
+      -24px 0 0 rgba(174, 226, 255, 0.2);
 }
 
 .nav-links {
@@ -244,7 +255,7 @@ input, select, textarea { font-family: var(--font-body); }
     color: rgba(255, 255, 255, 1);
     position: relative;
     padding-bottom: 2px;
-    background-image: linear-gradient(90deg, #C29049, #f7dfa6, #fff, #f7dfa6, #C29049);
+    background-image: linear-gradient(90deg, #7ab1cc, #AEE2FF, #fff, #AEE2FF, #7ab1cc);
     background-size: 200% auto;
     background-position: 0% center;
     -webkit-background-clip: text;
@@ -257,7 +268,7 @@ input, select, textarea { font-family: var(--font-body); }
 .nav-link:hover {
     color: rgba(255, 255, 255, 0);
     animation-play-state: running;
-    filter: drop-shadow(0 0 14px rgba(194, 144, 73, 0.45));
+    filter: drop-shadow(0 0 14px rgba(174, 226, 255, 0.45));
 }
 
 .nav-cta {
@@ -281,7 +292,7 @@ input, select, textarea { font-family: var(--font-body); }
     content: '';
     position: absolute;
     inset: 0;
-    background: #fff;
+    background: #00FF33;
     z-index: -1;
     transform: scaleY(0);
     transform-origin: bottom;
@@ -289,8 +300,8 @@ input, select, textarea { font-family: var(--font-body); }
 }
 
 .nav-cta:hover {
-    color: #111;
-    border-color: #fff;
+    color: var(--bg);
+    border-color: #00FF33;
 }
 
 .nav-cta:hover::before {
@@ -414,10 +425,10 @@ input, select, textarea { font-family: var(--font-body); }
     transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.word-precision { color: #402306; }
-.word-location { color: #C29049; }
-.word-comfort { color: #464C47; }
-.word-character { color: #A43131; }
+.word-precision { color: #AEE2FF; }
+.word-location { color: #AEE2FF; }
+.word-comfort { color: #AEE2FF; }
+.word-character { color: #AEE2FF; }
 
 .hero-subtitle {
     font-size: clamp(0.95rem, 1.2vw, 1.15rem);
@@ -677,8 +688,8 @@ input, select, textarea { font-family: var(--font-body); }
     color: #fff;
     font-weight: 300;
     font-style: italic;
-    mix-blend-mode: overlay;
-    opacity: 0.7;
+    text-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
 }
 
 /* ==========================================================================

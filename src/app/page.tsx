@@ -1,8 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import SideRays from "@/components/animations/SideRays";
 
 export default function Home() {
+  const [scrolledPastHero, setScrolledPastHero] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolledPastHero(window.scrollY > window.innerHeight * 0.5);
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       // @ts-ignore
@@ -66,7 +78,7 @@ export default function Home() {
           </h1>
           <p className="hero-subtitle">
             Three levels of considered living on the Limassol shoreline.<br />
-            For extended stays of one month or longer.
+            Curated for discerning guests, from 3 days to a full year.
           </p>
           <div className="hero-cta">
             <a href="#inquiry" className="btn-primary nav-anchor">Begin a Private Inquiry</a>
@@ -78,6 +90,23 @@ export default function Home() {
           <span>Scroll</span>
         </div>
       </header>
+
+      {/* Background Rays (Appears behind the content) */}
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none', mixBlendMode: 'screen', opacity: scrolledPastHero ? 1 : 0, transition: 'opacity 1.5s ease-in-out' }}>
+        <SideRays
+          speed={1.0}
+          rayColor1="#FFB75E"
+          rayColor2="#FFF0D1"
+          intensity={1.8}
+          spread={2.5}
+          origin="top-right"
+          tilt={-5}
+          saturation={1.3}
+          blend={0.6}
+          falloff={1.2}
+          opacity={0.7}
+        />
+      </div>
 
       {/* ── 2. PHILOSOPHY ── */}
       <section className="section philosophy" id="residence">
@@ -92,7 +121,7 @@ export default function Home() {
             <br />
             <p className="body-text reveal-copy">
               The Limassol Circuit is a private residence on the southern coast of Cyprus, designed
-              for guests who value discretion, considered interiors, and the quiet rhythm of a longer
+              for guests who value discretion, considered interiors, and the elevated rhythm of an exclusive
               stay. The spaces draw from the visual language of performance design culture: restrained
               palettes, proportioned surfaces, and an attention to tactile detail that reveals itself
               over weeks, not hours.
@@ -126,7 +155,7 @@ export default function Home() {
           {/* Feature 2: Image Right / Text Left */}
           <div className="feature-block reversed">
             <div className="feature-image-wrap reveal-image">
-              <img src="/assets/longphoto.jpg" alt="Morning light through the residence windows" />
+              <img src="/assets/barista_station.png" alt="A high-end luxury espresso machine and barista station" />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">The Ritual Corner</h3>
@@ -150,49 +179,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. INTERIOR SIGNATURES ── */}
+      {/* ── 4. BESPOKE INTERIORS ── */}
       <section className="section signatures" id="signatures">
         <div className="container">
-          <div className="section-label reveal-fade">[ Interior Signatures ]</div>
+          <div className="section-label reveal-fade">[ Bespoke Interiors ]</div>
           <div className="signatures-intro">
-            <h2 className="section-heading reveal-copy">Three moods, one residence.</h2>
+            <h2 className="section-heading reveal-copy">Tailored to your aesthetic.</h2>
             <p className="body-text reveal-copy">
-              Each interior signature is an original composition inspired by performance design
-              culture&mdash;not a brand reproduction, but a considered atmosphere rooted in the
-              same principles of precision, restraint, and material honesty.
+              The Limassol Circuit is designed as a refined canvas for our long-term guests. We recognize that an extended stay requires an environment that resonates with your personal taste. Prior to your arrival, we work closely with you to customize the atmosphere, lighting, and textural details of the residence, ensuring the space feels distinctly yours.
             </p>
-          </div>
-
-          <div className="signatures-grid">
-            <div className="signature-card reveal-card">
-              <span className="card-number">I</span>
-              <h3>Precision</h3>
-              <span className="card-subtitle">Stuttgart Temperament</span>
-              <p>
-                Matte charcoal surfaces, brushed aluminium accents, and a palette that moves between
-                warm grey and off-white. Quiet authority. Nothing unnecessary.
-              </p>
-            </div>
-
-            <div className="signature-card reveal-card">
-              <span className="card-number">II</span>
-              <h3>Rosso Vivo</h3>
-              <span className="card-subtitle">Maranello Warmth</span>
-              <p>
-                Deep burgundy textiles against carbon-toned walls. Warm leather, amber light, and
-                the sensory richness of a well-worn cockpit translated into domestic space.
-              </p>
-            </div>
-
-            <div className="signature-card reveal-card">
-              <span className="card-number">III</span>
-              <h3>Apex Noir</h3>
-              <span className="card-subtitle">Sant&rsquo;Agata Edge</span>
-              <p>
-                Matte black, angular geometry, and flashes of acid green in the details. The most
-                dramatic signature&mdash;for guests who want the space to make a statement.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -226,7 +221,7 @@ export default function Home() {
           </div>
           <div className="map-wrap reveal-image">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13038.571434912232!2d33.0425714!3d34.6806714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e7330045f20613%3A0x95973752e2f38dcd!2sLimassol%2C%20Cyprus!5e0!3m2!1sen!2sus!4v1717621234567!5m2!1sen!2sus"
+              src="https://maps.google.com/maps?q=34.673037,33.044670&z=15&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'grayscale(100%) invert(90%) contrast(1.1)' }}
@@ -275,7 +270,7 @@ export default function Home() {
             <div className="section-label reveal-fade">[ Stay Conditions ]</div>
             <h2 className="section-heading reveal-copy">A residence, not a hotel room.</h2>
             <p className="body-text reveal-copy" style={{ margin: '0 auto' }}>
-              The Limassol Circuit operates as a private rental for extended stays.
+              The Limassol Circuit operates as an exclusive private rental.
               Each booking is handled individually.
             </p>
 
@@ -286,19 +281,16 @@ export default function Home() {
               </li>
               <li className="terms-item reveal-copy">
                 <span className="terms-label">Minimum Stay</span>
-                <span className="terms-value">30 days</span>
+                <span className="terms-value">3 days</span>
               </li>
               <li className="terms-item reveal-copy">
                 <span className="terms-label">Maximum Stay</span>
-                <span className="terms-value">6 months</span>
+                <span className="terms-value">1 year (364 days)</span>
               </li>
-              <li className="terms-item reveal-copy">
-                <span className="terms-label">Short-Stay Premiums</span>
-                <span className="terms-value">Premium rates apply to qualifying shorter stays</span>
-              </li>
+
               <li className="terms-item reveal-copy">
                 <span className="terms-label">Ideal For</span>
-                <span className="terms-value">Executives, project-based residencies, seasonal relocations</span>
+                <span className="terms-value">High-net-worth individuals, executives, and luxury escapes</span>
               </li>
             </ul>
 
@@ -348,21 +340,22 @@ export default function Home() {
 
               <div className="form-row">
                 <div className="form-group inquiry-field-wrap">
-                  <label htmlFor="signature">Preferred Interior Signature</label>
-                  <select id="signature" className="inquiry-field" defaultValue="">
-                    <option value="" disabled>Select a signature</option>
-                    <option value="precision">Precision — Stuttgart Temperament</option>
-                    <option value="rosso-vivo">Rosso Vivo — Maranello Warmth</option>
-                    <option value="apex-noir">Apex Noir — Sant&rsquo;Agata Edge</option>
-                  </select>
+                  <label htmlFor="customization">Customization Preferences</label>
+                  <input
+                    type="text"
+                    id="customization"
+                    className="inquiry-field"
+                    placeholder="e.g. Minimalist, Warm tones..."
+                  />
                 </div>
                 <div className="form-group inquiry-field-wrap">
                   <label htmlFor="duration">Preferred Stay Duration</label>
                   <select id="duration" className="inquiry-field" defaultValue="">
                     <option value="" disabled>Select duration (optional)</option>
-                    <option value="1-2">1–2 months</option>
-                    <option value="2-4">2–4 months</option>
-                    <option value="4-6">4–6 months</option>
+                    <option value="3-7">3–7 days</option>
+                    <option value="1-4">1–4 weeks</option>
+                    <option value="1-6">1–6 months</option>
+                    <option value="6-12">6–12 months</option>
                     <option value="flexible">Flexible</option>
                   </select>
                 </div>

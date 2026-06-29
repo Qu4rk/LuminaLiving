@@ -1,6 +1,6 @@
 # The Limassol Circuit
 
-A private coastal residence on the southern coast of Cyprus. Designed for extended stays with considered interiors, material precision, and the constant presence of the Mediterranean.
+A private coastal residence on the southern coast of Cyprus. Designed for curated stays of 3 days up to a full year, with considered interiors, material precision, and the constant presence of the Mediterranean.
 
 ## Features
 - Custom GSAP ScrollTrigger and ScrollToPlugin animations
