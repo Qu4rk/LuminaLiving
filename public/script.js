@@ -131,6 +131,9 @@ window.initSiteAnimations = () => {
             delay: 0.2
         });
 
+        // Trigger navbar line animation in React
+        window.dispatchEvent(new Event('heroRevealed'));
+
         // Hero headline lines — clip reveal
         gsap.to('.hero-title .line', {
             y: '0%',
@@ -195,10 +198,10 @@ window.initSiteAnimations = () => {
             onUpdate: (self) => {
                 if (self.direction === 1 && self.scroll() > 100) {
                     // Scrolling down
-                    gsap.to(navbar, { yPercent: -100, opacity: 0, duration: 0.6, ease: EASE_PRIMARY, overwrite: 'auto' });
+                    gsap.to(navbar, { yPercent: -100, autoAlpha: 0, duration: 0.6, ease: EASE_PRIMARY, overwrite: 'auto' });
                 } else if (self.direction === -1) {
                     // Scrolling up
-                    gsap.to(navbar, { yPercent: 0, opacity: 1, duration: 0.6, ease: EASE_PRIMARY, overwrite: 'auto' });
+                    gsap.to(navbar, { yPercent: 0, autoAlpha: 1, duration: 0.6, ease: EASE_PRIMARY, overwrite: 'auto' });
                 }
             }
         });

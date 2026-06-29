@@ -5,14 +5,21 @@ import SideRays from "@/components/animations/SideRays";
 
 export default function Home() {
   const [scrolledPastHero, setScrolledPastHero] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolledPastHero(window.scrollY > window.innerHeight * 0.5);
+      setScrolledPastHero(window.scrollY > window.innerHeight * 0.8);
     };
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleHeroRevealed = () => setIsLoaded(true);
+    window.addEventListener('heroRevealed', handleHeroRevealed);
+    return () => window.removeEventListener('heroRevealed', handleHeroRevealed);
   }, []);
 
   useEffect(() => {
@@ -33,8 +40,9 @@ export default function Home() {
         <div className="preloader-text">The Limassol Circuit</div>
       </div>
 
+
       {/* Navigation */}
-      <nav className="navbar" id="navbar">
+      <nav className={`navbar ${scrolledPastHero ? "navbar-scrolled" : ""} ${isLoaded ? "is-loaded" : ""}`} id="navbar">
         <a href="#home" className="logo nav-anchor nav-reveal">The Limassol Circuit</a>
         <ul className="nav-links nav-reveal">
           <li><a href="#residence" className="nav-link nav-anchor">Residence</a></li>
@@ -42,6 +50,7 @@ export default function Home() {
           <li><a href="#location" className="nav-link nav-anchor">Location</a></li>
         </ul>
         <a href="#inquiry" className="nav-cta nav-anchor nav-reveal">Inquire</a>
+        <div className="header-line"></div>
       </nav>
 
       {/* ── 1. HERO ── */}
