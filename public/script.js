@@ -647,8 +647,9 @@ window.initSiteAnimations = () => {
         }
 
         function changeWord() {
+            if (wordArray.length === 0) return;
             var cw = wordArray[currentWord];
-            var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+            var nw = currentWord == wordArray.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
             }

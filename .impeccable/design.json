@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-30T20:50:00Z",
+  "title": "Design System: The Limassol Circuit",
+  "extensions": {
+    "colorMeta": {
+      "aged-brass": {
+        "role": "primary",
+        "displayName": "Aged Brass",
+        "canonical": "#8b7355",
+        "tonalRamp": [
+          "#2a2418",
+          "#3d3422",
+          "#52452e",
+          "#6a5740",
+          "#8b7355",
+          "#a89171",
+          "#c4b5a0",
+          "#e0d4c2"
+        ]
+      },
+      "coastal-night": {
+        "role": "neutral",
+        "displayName": "Coastal Night",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#111111",
+          "#1a1a1a",
+          "#262626",
+          "#3a3a3a",
+          "#5a5a5a",
+          "#8a8a8a",
+          "#e8e4df"
+        ]
+      },
+      "linen": {
+        "role": "neutral",
+        "displayName": "Linen",
+        "canonical": "#e8e4df",
+        "tonalRamp": [
+          "#3a3835",
+          "#5a5853",
+          "#7a766f",
+          "#9a958c",
+          "#b8b3a8",
+          "#d0cbbe",
+          "#e8e4df",
+          "#f5f2ed"
+        ]
+      },
+      "driftwood": {
+        "role": "neutral",
+        "displayName": "Driftwood",
+        "canonical": "#8b8178",
+        "tonalRamp": [
+          "#2a2622",
+          "#3d3833",
+          "#524b45",
+          "#6a6159",
+          "#8b8178",
+          "#a39a90",
+          "#bbb2a7",
+          "#d8d0c5"
+        ]
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.19, 1, 0.22, 1)",
+        "purpose": "The only easing in the system. Used for every transition and reveal. Ease-out-expo family. No bounce, no elastic."
+      },
+      {
+        "name": "reveal-duration",
+        "value": "0.8s",
+        "purpose": "Default duration for scroll reveals and image hover scale."
+      },
+      {
+        "name": "state-duration",
+        "value": "0.6s",
+        "purpose": "Duration for button/link state transitions (background, color, border)."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "max-width: 640px" },
+      { "name": "tablet", "value": "max-width: 1024px" },
+      { "name": "desktop", "value": "min-width: 1025px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The system's only button. Transparent with hairline-strong border, label-typography, square corners. Fills with Aged Brass on hover.",
+      "html": "<button class=\"ds-btn-primary\">BEGIN A PRIVATE INQUIRY</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; padding: 1rem 2.5rem; font-family: 'Chillax', 'Helvetica Neue', sans-serif; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; color: #e8e4df; border: 1px solid rgba(255,255,255,0.14); background: transparent; border-radius: 0; transition: background 0.6s cubic-bezier(0.19,1,0.22,1), color 0.6s cubic-bezier(0.19,1,0.22,1), border-color 0.6s cubic-bezier(0.19,1,0.22,1); cursor: pointer; } .ds-btn-primary:hover { background: #8b7355; border-color: #8b7355; color: #111111; } .ds-btn-primary:active { transform: scale(0.98); } .ds-btn-primary:focus-visible { outline: 1px solid #c4b5a0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Section Label",
+      "kind": "custom",
+      "refersTo": "section-label",
+      "description": "The signature micro-element. Bracketed, uppercase, 0.7rem, 0.2em letter-spacing, Aged Brass. Appears at the top of every section.",
+      "html": "<div class=\"ds-section-label\">[ Signature Living ]</div>",
+      "css": ".ds-section-label { font-family: 'Chillax', 'Helvetica Neue', sans-serif; font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.2em; color: #8b7355; margin-bottom: 2rem; }"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "section-heading",
+      "description": "Cormorant Garamond 300, fluid clamp scale, the dominant heading inside each section.",
+      "html": "<h2 class=\"ds-section-heading\">The details that define a stay.</h2>",
+      "css": ".ds-section-heading { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 300; line-height: 1.15; color: #e8e4df; margin-bottom: 2rem; }"
+    },
+    {
+      "name": "Feature Solo (Editorial Break)",
+      "kind": "card",
+      "refersTo": "feature-solo",
+      "description": "Text-only editorial pause between image-led feature blocks. Centered, hairline top+bottom borders, max-width 640px.",
+      "html": "<div class=\"ds-feature-solo\"><h3>Layered Comfort</h3><p>Four independently zoned climate systems. Acoustic-grade glazing on every window.</p></div>",
+      "css": ".ds-feature-solo { max-width: 640px; padding: clamp(3rem, 6vw, 5rem) 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); margin: 0 auto; text-align: center; } .ds-feature-solo h3 { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 1.2rem; color: #e8e4df; } .ds-feature-solo p { font-family: 'Chillax', 'Helvetica Neue', sans-serif; font-size: clamp(0.95rem, 1.1vw, 1.05rem); color: #8b8178; line-height: 1.8; max-width: 48ch; margin: 0 auto; }"
+    },
+    {
+      "name": "Hairline Divider",
+      "kind": "custom",
+      "refersTo": "hairline-divider",
+      "description": "1px rgba(255,255,255,0.08). The default way to separate anything.",
+      "html": "<div class=\"ds-hairline\"></div>",
+      "css": ".ds-hairline { width: 100%; height: 1px; background: rgba(255,255,255,0.08); border: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Considered Coast",
+    "overview": "An editorial residence microsite that treats a coastal Cyprus rental the way a serious magazine treats its subject: with restraint, precision, and the assumption that the reader has taste. The system is built on tinted-black surfaces, warm-bronze accents used sparingly, and a serif/sans pairing (Cormorant Garamond + Chillax) that lets the typography do the work that gradients and shadows would do in a lesser site. Depth comes from hairline borders and tonal shifts, never from shadows. Motion is scroll-revealed, staggered, ease-out, and never performs.",
+    "keyCharacteristics": [
+      "Tinted-black canvas, never pure #000",
+      "Warm bronze accent used on ≤10% of any screen",
+      "Square corners (border-radius: 0) with a 2px exception for image wraps",
+      "Hairline borders as the primary divider vocabulary",
+      "Serif display + sans body; hierarchy through weight contrast and fluid clamp() scales",
+      "All motion uses cubic-bezier(0.19, 1, 0.22, 1); no bounce, no elastic"
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Aged Brass appears on ≤10% of any given screen. Its rarity is the point.", "section": "colors" },
+      { "name": "The Tinted-Black Rule", "body": "Never use #000 or #fff. Every neutral is tinted warm.", "section": "colors" },
+      { "name": "The Anomaly Quarantine", "body": "Legacy #00FF33 and #AEE2FF violate the palette and must be replaced with Aged Brass on any redesign.", "section": "colors" },
+      { "name": "The Serif-Heads-Only Rule", "body": "Cormorant Garamond is for headings and lead text only. Body, labels, buttons, nav use Chillax.", "section": "typography" },
+      { "name": "The Label Voice Rule", "body": "Section labels are always uppercase, 0.7rem, 0.2em letter-spacing, bracketed [ Like This ], Aged Brass.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "No box-shadow permitted. Depth comes from hairlines and tonal layering only.", "section": "elevation" },
+      { "name": "The Hover-Transform Rule", "body": "Only motion on a resting surface is slow transform: scale() on contained images. No translateY lift, no shadow-on-hover.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Aged Brass (#8b7355) on section labels, the hero CTA border, and at most one accent element per viewport.",
+      "Do set every heading in Cormorant Garamond at weight 300, every body/label in Chillax.",
+      "Do separate sections and elements with 1px rgba(255,255,255,0.08) hairlines.",
+      "Do use clamp() for every type size and every major spacing value.",
+      "Do reveal content on scroll with cubic-bezier(0.19, 1, 0.22, 1) easing, staggered.",
+      "Do respect prefers-reduced-motion: reduce."
+    ],
+    "donts": [
+      "Don't use pure #000 or #fff.",
+      "Don't propagate legacy #00FF33 or #AEE2FF; replace with Aged Brass.",
+      "Don't use box-shadow on resting surfaces.",
+      "Don't use border-left/right >1px as colored stripes.",
+      "Don't use background-clip: text with gradients.",
+      "Don't use glassmorphism decoratively.",
+      "Don't build hero-metric or identical card-grid templates.",
+      "Don't use bounce or elastic easing.",
+      "Don't write spa-copy (indulge, unwind, luxurious, the ultimate).",
+      "Don't introduce a second saturated color."
+    ]
+  }
+}

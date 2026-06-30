@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import SideRays from "@/components/animations/SideRays";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 
 export default function Home() {
   const [scrolledPastHero, setScrolledPastHero] = useState(false);
@@ -30,7 +32,16 @@ export default function Home() {
         window.initSiteAnimations();
       }
     }, 300);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      // @ts-ignore
+      if (typeof window !== "undefined") {
+        // @ts-ignore
+        if (window.rotatingInterval) clearInterval(window.rotatingInterval);
+        // @ts-ignore
+        if (window.rotatingTimeout) clearTimeout(window.rotatingTimeout);
+      }
+    };
   }, []);
 
   return (
@@ -176,14 +187,35 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 3: Text only — editorial break */}
-          <div className="feature-solo reveal-copy">
-            <h3>Layered Comfort</h3>
-            <p>
-              Four independently zoned climate systems. Acoustic-grade glazing on every window.
-              Blackout curtains with light-filtering sheers. The kind of environmental control
-              you stop noticing because it simply works.
-            </p>
+          {/* Feature 3: Layered Comfort — four-system strata */}
+          <div className="feature-layered">
+            <HeroHighlight containerClassName="py-0 h-auto bg-transparent mb-6 justify-start text-left items-start">
+              <h3 className="relative z-10 m-0 reveal-copy">
+                Layered <Highlight style={{ backgroundImage: "linear-gradient(to right, #7ab1cc, #AEE2FF)", color: "#000", borderRadius: "0.4em", padding: "0 0.2em 0.1em" }}>Comfort</Highlight>
+              </h3>
+            </HeroHighlight>
+            <ol className="strata">
+              <li className="stratum reveal-copy">
+                <span className="stratum-index" aria-hidden="true">01</span>
+                <span className="stratum-label">Climate</span>
+                <span className="stratum-spec">Four independently zoned climate systems.</span>
+              </li>
+              <li className="stratum reveal-copy">
+                <span className="stratum-index" aria-hidden="true">02</span>
+                <span className="stratum-label">Glazing</span>
+                <span className="stratum-spec">Acoustic-grade glazing on every window.</span>
+              </li>
+              <li className="stratum reveal-copy">
+                <span className="stratum-index" aria-hidden="true">03</span>
+                <span className="stratum-label">Curtains</span>
+                <span className="stratum-spec">Blackout curtains with light-filtering sheers.</span>
+              </li>
+              <li className="stratum reveal-copy">
+                <span className="stratum-index" aria-hidden="true">04</span>
+                <span className="stratum-label">Ambient</span>
+                <span className="stratum-spec">Environmental control you stop noticing because it simply works.</span>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
@@ -204,9 +236,15 @@ export default function Home() {
       {/* ── 5. THE COAST — Full Width Image ── */}
       <section className="full-image">
         <div className="full-image-inner reveal-image">
-          <img src="/assets/paraliakos.png" alt="Limassol coastal road at golden hour" />
+          <img src="/assets/paraliakos-sunset.png" alt="Limassol coastal road at sunset" className="bg-img" />
+          <img src="/assets/paraliakos.png" alt="Limassol coastal road at golden hour" className="fg-img" />
         </div>
-        <h2 className="overlay-text">The Coast</h2>
+        <h2 className="overlay-text">
+          <span className="slide-swap-container">
+            <span className="slide-swap-text">The Coast</span>
+            <span className="slide-swap-alt">Is Yours.</span>
+          </span>
+        </h2>
       </section>
 
       {/* ── 5b. LOCATION ── */}
@@ -395,10 +433,12 @@ export default function Home() {
               <a href="#" className="footer-link">WhatsApp</a>
               <a href="#" className="footer-link">Instagram</a>
               <a href="#" className="footer-link">Email</a>
+              <Link href="/terms" className="footer-link">Terms</Link>
+              <Link href="/privacy" className="footer-link">Privacy</Link>
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2026 The Limassol Circuit. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} The Limassol Circuit. All rights reserved.</p>
             <p className="disclaimer">
               Interior signatures are original compositions. Not affiliated with
               Porsche, Ferrari, or Lamborghini.
