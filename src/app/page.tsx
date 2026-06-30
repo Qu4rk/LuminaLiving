@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import SideRays from "@/components/animations/SideRays";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { FeatureAccordion } from "@/components/ui/FeatureAccordion";
 
 export default function Home() {
   const [scrolledPastHero, setScrolledPastHero] = useState(false);
@@ -97,8 +98,8 @@ export default function Home() {
             </span>
           </h1>
           <p className="hero-subtitle">
-            Three levels of considered living on the Limassol shoreline.<br />
-            Curated for discerning guests, from 3 days to a full year.
+            An ultra-exclusive coastal haven engineered for absolute, uncompromising comfort.<br />
+            A bespoke sanctuary offering profound serenity and effortless living, from 3 days to a full year.
           </p>
           <div className="hero-cta">
             <a href="#inquiry" className="btn-primary nav-anchor">Begin a Private Inquiry</a>
@@ -194,28 +195,14 @@ export default function Home() {
                 Layered <Highlight style={{ backgroundImage: "linear-gradient(to right, #7ab1cc, #AEE2FF)", color: "#000", borderRadius: "0.4em", padding: "0 0.2em 0.1em" }}>Comfort</Highlight>
               </h3>
             </HeroHighlight>
-            <ol className="strata">
-              <li className="stratum reveal-copy">
-                <span className="stratum-index" aria-hidden="true">01</span>
-                <span className="stratum-label">Climate</span>
-                <span className="stratum-spec">Four independently zoned climate systems.</span>
-              </li>
-              <li className="stratum reveal-copy">
-                <span className="stratum-index" aria-hidden="true">02</span>
-                <span className="stratum-label">Glazing</span>
-                <span className="stratum-spec">Acoustic-grade glazing on every window.</span>
-              </li>
-              <li className="stratum reveal-copy">
-                <span className="stratum-index" aria-hidden="true">03</span>
-                <span className="stratum-label">Curtains</span>
-                <span className="stratum-spec">Blackout curtains with light-filtering sheers.</span>
-              </li>
-              <li className="stratum reveal-copy">
-                <span className="stratum-index" aria-hidden="true">04</span>
-                <span className="stratum-label">Ambient</span>
-                <span className="stratum-spec">Environmental control you stop noticing because it simply works.</span>
-              </li>
-            </ol>
+            <FeatureAccordion 
+              items={[
+                { text: 'Microclimate', description: 'Precision temperature control across four independent zones for personalized comfort.', image: '/assets/feature_microclimate_1782852308980.png' },
+                { text: 'Acoustic Envelope', description: 'Acoustic-grade, multi-layered glass ensuring absolute tranquility and thermal perfection.', image: '/assets/feature_acoustic_envelope_1782852327696.png' },
+                { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/assets/feature_light_orchestration_1782852343634.png' },
+                { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/assets/feature_sensory_architecture_1782852360965.png' }
+              ]} 
+            />
           </div>
         </div>
       </section>
@@ -433,15 +420,18 @@ export default function Home() {
               <a href="#" className="footer-link">WhatsApp</a>
               <a href="#" className="footer-link">Instagram</a>
               <a href="#" className="footer-link">Email</a>
-              <Link href="/terms" className="footer-link">Terms</Link>
-              <Link href="/privacy" className="footer-link">Privacy</Link>
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} The Limassol Circuit. All rights reserved.</p>
+            <div className="footer-bottom-left">
+              <p>&copy; {new Date().getFullYear()} The Limassol Circuit. All rights reserved.</p>
+              <div className="legal-links" style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
+                <Link href="/terms" className="footer-link" style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Terms</Link>
+                <Link href="/privacy" className="footer-link" style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Privacy</Link>
+              </div>
+            </div>
             <p className="disclaimer">
-              Interior signatures are original compositions. Not affiliated with
-              Porsche, Ferrari, or Lamborghini.
+              Redefining coastal luxury. Every detail is curated for an exceptional living experience.
             </p>
           </div>
         </div>

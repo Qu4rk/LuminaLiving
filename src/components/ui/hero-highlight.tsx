@@ -127,7 +127,7 @@ export const Highlight = ({
           delay: 0.2,
         }
       }}
-      viewport={{ once: false, margin: "-10% 0px -10% 0px" }}
+      viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
       style={{
         backgroundRepeat: "no-repeat",
         backgroundPosition: "left center",
