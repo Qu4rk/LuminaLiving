@@ -132,15 +132,15 @@ export default function Home() {
       {/* ── 2. PHILOSOPHY ── */}
       <section className="section philosophy" id="residence">
         <div className="container">
-          <div className="section-label reveal-fade">[ The Residence ]</div>
+          <div className="section-label reveal-fade">The Residence</div>
           <div className="philosophy-inner">
             <p className="lead-text reveal-copy">
-              Eighty square metres arranged across three floors&mdash;each level a distinct register
+              Eighty square metres arranged across three floors, each level a distinct register
               of living, shaped by material precision, spatial calm, and the constant presence of the
               Mediterranean beyond the glass.
             </p>
             <br />
-            <p className="body-text reveal-copy">
+            <p className="body-text reveal-copy chillax-copy">
               The Limassol Circuit is a private residence on the southern coast of Cyprus, designed
               for guests who value discretion, considered interiors, and the elevated rhythm of an exclusive
               stay. The spaces draw from the visual language of performance design culture: restrained
@@ -154,7 +154,7 @@ export default function Home() {
       {/* ── 3. SIGNATURE LIVING ── */}
       <section className="section signature-living">
         <div className="container">
-          <div className="section-label reveal-fade">[ Signature Living ]</div>
+          <div className="section-label reveal-fade">Signature Living</div>
           <h2 className="section-heading reveal-copy">The details that define a stay.</h2>
 
           {/* Feature 1: Image Left / Text Right */}
@@ -164,8 +164,8 @@ export default function Home() {
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">Curated Interior Identity</h3>
-              <p className="reveal-copy">
-                Each stay begins with a choice of interior mood&mdash;three distinct palettes drawn
+              <p className="reveal-copy chillax-copy">
+                Each stay begins with a choice of interior mood, three distinct palettes drawn
                 from the visual language of performance design. Surfaces, textiles, and accent lighting
                 shift to reflect your preference, creating a space that feels genuinely personal from
                 the first evening.
@@ -180,10 +180,10 @@ export default function Home() {
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">The Ritual Corner</h3>
-              <p className="reveal-copy">
+              <p className="reveal-copy chillax-copy">
                 A dedicated barista-grade station occupies the kitchen&rsquo;s quietest corner.
                 Precision-ground espresso, hand-poured filter, or a slow morning with a moka
-                pot&mdash;the routine is yours to define, with the coast as a constant backdrop.
+                pot, the routine is yours to define, with the coast as a constant backdrop.
               </p>
             </div>
           </div>
@@ -210,10 +210,10 @@ export default function Home() {
       {/* ── 4. BESPOKE INTERIORS ── */}
       <section className="section signatures" id="signatures">
         <div className="container">
-          <div className="section-label reveal-fade">[ Bespoke Interiors ]</div>
+          <div className="section-label reveal-fade">Bespoke Interiors</div>
           <div className="signatures-intro">
             <h2 className="section-heading reveal-copy">Tailored to your aesthetic.</h2>
-            <p className="body-text reveal-copy">
+            <p className="body-text reveal-copy chillax-copy">
               The Limassol Circuit is designed as a refined canvas for our long-term guests. We recognize that an extended stay requires an environment that resonates with your personal taste. Prior to your arrival, we work closely with you to customize the atmosphere, lighting, and textural details of the residence, ensuring the space feels distinctly yours.
             </p>
           </div>
@@ -237,14 +237,14 @@ export default function Home() {
       {/* ── 5b. LOCATION ── */}
       <section className="section location" id="location">
         <div className="container">
-          <div className="section-label reveal-fade">[ Location ]</div>
+          <div className="section-label reveal-fade">Location</div>
           <div className="location-text">
             <h2 className="section-heading reveal-copy">
               Limassol&rsquo;s coastal edge.
             </h2>
-            <p className="body-text reveal-copy">
+            <p className="body-text reveal-copy chillax-copy">
               The residence sits within walking distance of the sea, positioned along the stretch
-              where the city meets the Mediterranean. The Molos promenade unfolds to the east&mdash;a
+              where the city meets the Mediterranean. The Molos promenade unfolds to the east, a
               sculpted coastal walk that traces the shoreline for two kilometres. To the west, the Old
               Port holds its quieter character: stone walls, fishing boats, a handful of restaurants
               that have earned their regulars. The Limassol Marina is minutes away, its clean lines
@@ -272,7 +272,7 @@ export default function Home() {
       <section className="section atmosphere" id="atmosphere">
         <div className="container">
           <div className="atmosphere-header">
-            <div className="section-label reveal-fade">[ Atmosphere ]</div>
+            <div className="section-label reveal-fade">Atmosphere</div>
             <h2 className="section-heading reveal-copy">The surrounding rhythm.</h2>
           </div>
 
@@ -301,7 +301,7 @@ export default function Home() {
       <section className="section terms">
         <div className="container">
           <div className="terms-inner">
-            <div className="section-label reveal-fade">[ Stay Conditions ]</div>
+            <div className="section-label reveal-fade">Stay Conditions</div>
             <h2 className="section-heading reveal-copy">A residence, not a hotel room.</h2>
             <p className="body-text reveal-copy" style={{ margin: '0 auto' }}>
               The Limassol Circuit operates as an exclusive private rental.
@@ -340,7 +340,7 @@ export default function Home() {
         <div className="container">
           <div className="inquiry-inner">
             <div className="inquiry-intro">
-              <div className="section-label reveal-fade">[ Private Inquiry ]</div>
+              <div className="section-label reveal-fade">Private Inquiry</div>
               <h2 className="section-heading inquiry-heading">Begin a Private Inquiry</h2>
               <p className="body-text reveal-copy" style={{ margin: '0 auto' }}>
                 Share a few details and we will respond with a tailored stay proposal,
