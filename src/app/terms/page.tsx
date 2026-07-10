@@ -1,15 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Terms & Conditions | The Limassol Circuit",
-  description: "Terms and conditions for stays at The Limassol Circuit.",
+  title: "Terms & Conditions | Lumina Living",
+  description: "Terms and conditions for stays at Lumina Living.",
 };
 
 export default function TermsAndConditions() {
   return (
     <div className="legal-page">
       <nav className="legal-nav">
-        <Link href="/" className="logo">The Limassol Circuit</Link>
+        <Link href="/" className="logo">Lumina Living</Link>
       </nav>
 
       <main className="legal-container">
@@ -21,7 +21,7 @@ export default function TermsAndConditions() {
 
           <h2>1. Introduction</h2>
           <p>
-            These Terms & Conditions govern the rental and use of The Limassol Circuit private residence. By confirming a booking and submitting payment, you ("the Guest") agree to abide by these terms. 
+            These Terms & Conditions govern the rental and use of Lumina Living private residence. By confirming a booking and submitting payment, you ("the Guest") agree to abide by these terms. 
           </p>
 
           <h2>2. Booking and Payments</h2>
@@ -36,7 +36,7 @@ export default function TermsAndConditions() {
 
           <h2>3. Nature of the Rental</h2>
           <p>
-            The Limassol Circuit operates strictly as a private residential rental. It is not a hotel. While we offer extensive customization prior to arrival, daily housekeeping and 24/7 on-site staff are not provided unless explicitly requested and agreed upon as an additional service.
+            Lumina Living operates strictly as a private residential rental. It is not a hotel. While we offer extensive customization prior to arrival, daily housekeeping and 24/7 on-site staff are not provided unless explicitly requested and agreed upon as an additional service.
           </p>
 
           <h2>4. Use of the Property</h2>
@@ -71,13 +71,13 @@ export default function TermsAndConditions() {
             For any questions regarding these Terms & Conditions, please contact us prior to booking at:
           </p>
           <p>
-            <strong>Email:</strong> legal@thelimassolcircuit.com
+            <strong>Email:</strong> legal@luminaliving.com
           </p>
         </div>
       </main>
 
       <footer className="legal-footer">
-        <p>&copy; {new Date().getFullYear()} The Limassol Circuit. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Lumina Living. All rights reserved.</p>
       </footer>
     </div>
   );

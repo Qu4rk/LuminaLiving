@@ -1,5 +1,5 @@
 ---
-name: The Limassol Circuit
+name: Lumina Living
 description: Luxury editorial residence microsite on the Limassol shoreline
 colors:
   coastal-night: "#111111"
@@ -72,7 +72,7 @@ components:
     height: "1px"
 ---
 
-# Design System: The Limassol Circuit
+# Design System: Lumina Living
 
 ## 1. Overview
 

@@ -49,13 +49,13 @@ export default function Home() {
     <>
       {/* Preloader */}
       <div className="preloader">
-        <div className="preloader-text">The Limassol Circuit</div>
+        <div className="preloader-text">Lumina Living</div>
       </div>
 
 
       {/* Navigation */}
       <nav className={`navbar ${scrolledPastHero ? "navbar-scrolled" : ""} ${isLoaded ? "is-loaded" : ""}`} id="navbar">
-        <a href="#home" className="logo nav-anchor nav-reveal">The Limassol Circuit</a>
+        <a href="#home" className="logo nav-anchor nav-reveal">Lumina Living</a>
         <ul className="nav-links nav-reveal">
           <li><a href="#residence" className="nav-link nav-anchor">Residence</a></li>
           <li><a href="#signatures" className="nav-link nav-anchor">Signatures</a></li>
@@ -141,7 +141,7 @@ export default function Home() {
             </p>
             <br />
             <p className="body-text reveal-copy chillax-copy">
-              The Limassol Circuit is a private residence on the southern coast of Cyprus, designed
+              Lumina Living is a private residence on the southern coast of Cyprus, designed
               for guests who value discretion, considered interiors, and the elevated rhythm of an exclusive
               stay. The spaces draw from the visual language of performance design culture: restrained
               palettes, proportioned surfaces, and an attention to tactile detail that reveals itself
@@ -214,7 +214,7 @@ export default function Home() {
           <div className="signatures-intro">
             <h2 className="section-heading reveal-copy">Tailored to your aesthetic.</h2>
             <p className="body-text reveal-copy chillax-copy">
-              The Limassol Circuit is designed as a refined canvas for our long-term guests. We recognize that an extended stay requires an environment that resonates with your personal taste. Prior to your arrival, we work closely with you to customize the atmosphere, lighting, and textural details of the residence, ensuring the space feels distinctly yours.
+              Lumina Living is designed as a refined canvas for our long-term guests. We recognize that an extended stay requires an environment that resonates with your personal taste. Prior to your arrival, we work closely with you to customize the atmosphere, lighting, and textural details of the residence, ensuring the space feels distinctly yours.
             </p>
           </div>
         </div>
@@ -304,7 +304,7 @@ export default function Home() {
             <div className="section-label reveal-fade">Stay Conditions</div>
             <h2 className="section-heading reveal-copy">A residence, not a hotel room.</h2>
             <p className="body-text reveal-copy" style={{ margin: '0 auto' }}>
-              The Limassol Circuit operates as an exclusive private rental.
+              Lumina Living operates as an exclusive private rental.
               Each booking is handled individually.
             </p>
 
@@ -413,8 +413,8 @@ export default function Home() {
         <div className="container">
           <div className="footer-upper">
             <div>
-              <div className="footer-brand">The Limassol Circuit</div>
-              <div className="footer-location">Limassol, Cyprus</div>
+              <div className="footer-brand">Lumina Living</div>
+              <div className="footer-location chillax-copy">Limassol, Cyprus</div>
             </div>
             <div className="footer-links">
               <a href="#" className="footer-link">WhatsApp</a>
@@ -424,7 +424,7 @@ export default function Home() {
           </div>
           <div className="footer-bottom">
             <div className="footer-bottom-left">
-              <p>&copy; {new Date().getFullYear()} The Limassol Circuit. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Lumina Living. All rights reserved.</p>
               <div className="legal-links" style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
                 <Link href="/terms" className="footer-link" style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Terms</Link>
                 <Link href="/privacy" className="footer-link" style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Privacy</Link>

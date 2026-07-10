@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Limassol Circuit — Private Coastal Residence",
+  title: "Lumina Living — Private Coastal Residence",
   description:
     "A private three-level residence on the Limassol shoreline. Considered interiors, coastal proximity, curated stays from 3 days to a full year.",
 };

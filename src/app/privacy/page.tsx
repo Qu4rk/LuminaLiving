@@ -1,15 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Privacy Policy | The Limassol Circuit",
-  description: "Privacy Policy and Data Protection information for The Limassol Circuit.",
+  title: "Privacy Policy | Lumina Living",
+  description: "Privacy Policy and Data Protection information for Lumina Living.",
 };
 
 export default function PrivacyPolicy() {
   return (
     <div className="legal-page">
       <nav className="legal-nav">
-        <Link href="/" className="logo">The Limassol Circuit</Link>
+        <Link href="/" className="logo">Lumina Living</Link>
       </nav>
 
       <main className="legal-container">
@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
 
           <h2>1. Introduction</h2>
           <p>
-            The Limassol Circuit ("we", "our", or "us") is committed to protecting your privacy and ensuring that your personal data is handled in a safe and responsible manner in accordance with the General Data Protection Regulation (GDPR) and applicable Cyprus data protection laws.
+            Lumina Living ("we", "our", or "us") is committed to protecting your privacy and ensuring that your personal data is handled in a safe and responsible manner in accordance with the General Data Protection Regulation (GDPR) and applicable Cyprus data protection laws.
           </p>
           <p>
             This Privacy Policy outlines how we collect, use, process, and protect your personal data when you visit our website, inquire about our residence, or stay with us.
@@ -73,13 +73,13 @@ export default function PrivacyPolicy() {
             If you have any questions about this Privacy Policy or wish to exercise your data protection rights, please contact us at:
           </p>
           <p>
-            <strong>Email:</strong> legal@thelimassolcircuit.com
+            <strong>Email:</strong> legal@luminaliving.com
           </p>
         </div>
       </main>
 
       <footer className="legal-footer">
-        <p>&copy; {new Date().getFullYear()} The Limassol Circuit. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Lumina Living. All rights reserved.</p>
       </footer>
     </div>
   );

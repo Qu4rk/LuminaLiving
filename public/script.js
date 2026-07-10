@@ -1,5 +1,5 @@
 /**
- * The Limassol Circuit — Animation System
+ * Lumina Living — Animation System
  * GSAP + ScrollTrigger + ScrollToPlugin
  * Motion language: restrained, premium, cinematic, slow, editorial.
  */
