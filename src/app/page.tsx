@@ -49,13 +49,19 @@ export default function Home() {
     <>
       {/* Preloader */}
       <div className="preloader">
-        <div className="preloader-text">Lumina Living</div>
+        <div className="preloader-content">
+          <img src="/luminaliving_logo.png" alt="Lumina Living" className="preloader-logo" />
+          <div className="preloader-text">Lumina Living</div>
+        </div>
       </div>
 
 
       {/* Navigation */}
       <nav className={`navbar ${scrolledPastHero ? "navbar-scrolled" : ""} ${isLoaded ? "is-loaded" : ""}`} id="navbar">
-        <a href="#home" className="logo nav-anchor nav-reveal">Lumina Living</a>
+        <a href="#home" className="logo nav-anchor nav-reveal">
+          <img src="/luminaliving_logo.png" alt="Lumina Living" className="logo-img" />
+          Lumina Living
+        </a>
         <ul className="nav-links nav-reveal">
           <li><a href="#residence" className="nav-link nav-anchor">Residence</a></li>
           <li><a href="#signatures" className="nav-link nav-anchor">Signatures</a></li>
@@ -412,9 +418,12 @@ export default function Home() {
       <footer className="site-footer">
         <div className="container">
           <div className="footer-upper">
-            <div>
-              <div className="footer-brand">Lumina Living</div>
-              <div className="footer-location chillax-copy">Limassol, Cyprus</div>
+<div>
+            <div className="footer-brand-group">
+            <img src="/luminaliving_logo.png" alt="Lumina Living" className="footer-logo-img" />
+            <div className="footer-brand">Lumina Living</div>
+            </div>
+            <div className="footer-location chillax-copy">Limassol, Cyprus</div>
             </div>
             <div className="footer-links">
               <a href="#" className="footer-link">WhatsApp</a>

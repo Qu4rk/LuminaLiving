@@ -80,14 +80,15 @@ window.initSiteAnimations = () => {
        PRELOADER
        ========================================================================== */
     const preloaderText = document.querySelector('.preloader-text');
+    const preloaderLogo = document.querySelector('.preloader-logo');
     const preloader = document.querySelector('.preloader');
 
     // Prevent snapping by setting the initial scale immediately
     gsap.set('.hero-video-wrapper', { scale: 1.06 });
 
     if (preloader) {
-        // Fade in preloader text
-        gsap.to(preloaderText, {
+        // Fade in preloader logo and text
+        gsap.to([preloaderLogo, preloaderText], {
             opacity: 1,
             duration: DUR_NORMAL,
             ease: EASE_PRIMARY

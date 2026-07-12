@@ -228,6 +228,20 @@ input, select, textarea { font-family: var(--font-body); }
     opacity: 0;
 }
 
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.preloader-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    opacity: 0;
+}
+
 /* ==========================================================================
    Navigation — Elyse-style three-zone layout
    ========================================================================== */
@@ -286,6 +300,10 @@ input, select, textarea { font-family: var(--font-body); }
     letter-spacing: 0.15em;
     color: #fff;
     justify-self: start;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
     transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), text-shadow 0.35s ease, color 0.35s ease;
 }
 
@@ -297,6 +315,13 @@ input, select, textarea { font-family: var(--font-body); }
       -12px 0 0 rgba(174, 226, 255, 0.6),
       -18px 0 0 rgba(174, 226, 255, 0.4),
       -24px 0 0 rgba(174, 226, 255, 0.2);
+}
+
+.logo-img {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .nav-links {
@@ -1175,6 +1200,24 @@ input, select, textarea { font-family: var(--font-body); }
     text-transform: uppercase;
     color: var(--text);
     margin-bottom: 0.8rem;
+}
+
+.footer-brand-group {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-brand-group .footer-brand {
+    margin-bottom: 0;
+}
+
+.footer-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .footer-location {

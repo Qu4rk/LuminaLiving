@@ -9,7 +9,10 @@ export default function PrivacyPolicy() {
   return (
     <div className="legal-page">
       <nav className="legal-nav">
-        <Link href="/" className="logo">Lumina Living</Link>
+        <Link href="/" className="logo">
+          <img src="/luminaliving_logo.png" alt="Lumina Living" className="logo-img" />
+          Lumina Living
+        </Link>
       </nav>
 
       <main className="legal-container">

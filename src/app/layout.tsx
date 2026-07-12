@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "Lumina Living — Private Coastal Residence",
   description:
     "A private three-level residence on the Limassol shoreline. Considered interiors, coastal proximity, curated stays from 3 days to a full year.",
+  icons: {
+    icon: [
+      { url: "/luminaliving_logo.png", type: "image/png", sizes: "32x32", color: "#ffffff" },
+      { url: "/luminaliving_logo.png", type: "image/png", sizes: "48x48", color: "#ffffff" },
+      { url: "/luminaliving_logo.png", type: "image/png", sizes: "64x64", color: "#ffffff" },
+      { url: "/luminaliving_logo.png", type: "image/png", sizes: "128x128", color: "#ffffff" },
+      { url: "/luminaliving_logo.png", type: "image/png", sizes: "256x256", color: "#ffffff" },
+    ],
+  },
 };
 
 export default function RootLayout({
