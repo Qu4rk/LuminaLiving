@@ -1472,9 +1472,6 @@ input, select, textarea { font-family: var(--font-body); }
     }
 
     .gallery-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
         padding: 1rem var(--gutter);
         gap: 12px;
     }
@@ -1482,7 +1479,6 @@ input, select, textarea { font-family: var(--font-body); }
     .gallery-item {
         flex: 0 0 85vw;
         height: 56vw;
-        scroll-snap-align: center;
         border-radius: 6px;
     }
 

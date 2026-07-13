@@ -439,8 +439,7 @@ window.initSiteAnimations = () => {
        INFINITE HORIZONTAL PARALLAX GALLERY
        ========================================================================== */
     const gallery = document.getElementById('atmosphere-gallery');
-    const isMobileGallery = window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(pointer: coarse)").matches;
-    if (gallery && !prefersReduced && !isMobileGallery) {
+    if (gallery && !prefersReduced) {
         const SNAP_ENABLED = true;
         const SNAP_DELAY = 150; 
         const SNAP_STRENGTH = 0.08;
@@ -565,7 +564,44 @@ window.initSiteAnimations = () => {
                 snapTimeout = setTimeout(triggerSnap, SNAP_DELAY);
             });
         }
+        // Touch / Swipe Support
+        let isDragging = false;
+        let startX = 0;
+        let lastX = 0;
+        let dragVelocity = 0;
+
+        gallery.addEventListener('pointerdown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            lastX = e.clientX;
+            velocity = 0;
+            dragVelocity = 0;
+            clearTimeout(snapTimeout);
+            gallery.style.cursor = 'grabbing';
+            // Disable pointer events on images during drag
+            images.forEach(img => img.style.pointerEvents = 'none');
+        });
+
+        window.addEventListener('pointermove', (e) => {
+            if (!isDragging) return;
+            const deltaX = lastX - e.clientX;
+            targetScroll += deltaX;
+            dragVelocity = deltaX;
+            lastX = e.clientX;
+        });
+
+        window.addEventListener('pointerup', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            gallery.style.cursor = '';
+            images.forEach(img => img.style.pointerEvents = '');
+            velocity = dragVelocity * 1.5; // impart some momentum
+            snapTimeout = setTimeout(triggerSnap, SNAP_DELAY);
+        });
         
+        // Prevent default image drag
+        images.forEach(img => img.addEventListener('dragstart', e => e.preventDefault()));
+
         let lastTimestamp = 0;
         let offsets = new Array(images.length).fill(0);
         
