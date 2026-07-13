@@ -1487,7 +1487,7 @@ input, select, textarea { font-family: var(--font-body); }
     }
 
     .gallery-nav-btn {
-        display: none;
+        /* display: none; */
     }
 
     /* ── Terms ── */

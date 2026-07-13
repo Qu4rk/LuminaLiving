@@ -614,11 +614,28 @@ window.initSiteAnimations = () => {
             }, 100);
         });
         
-        // Initial center starting position
         setTimeout(() => {
             targetScroll = getOriginalSetWidth();
             currentScroll = targetScroll;
         }, 100);
+    } else if (gallery && isMobileGallery) {
+        // Native scroll snapping for mobile gallery buttons
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const container = document.getElementById('atmosphere-gallery');
+        
+        if (prevBtn && container) {
+            prevBtn.addEventListener('click', () => {
+                const itemWidth = container.querySelector('.gallery-item').offsetWidth + 12; // 12px gap
+                container.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+            });
+        }
+        if (nextBtn && container) {
+            nextBtn.addEventListener('click', () => {
+                const itemWidth = container.querySelector('.gallery-item').offsetWidth + 12;
+                container.scrollBy({ left: itemWidth, behavior: 'smooth' });
+            });
+        }
     }
 
     /* ==========================================================================
