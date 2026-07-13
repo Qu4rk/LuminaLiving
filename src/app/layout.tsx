@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     "A private three-level residence on the Limassol shoreline. Considered interiors, coastal proximity, curated stays from 3 days to a full year.",
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "32x32", color: "#ffffff" },
-      { url: "/favicon.png", type: "image/png", sizes: "48x48", color: "#ffffff" },
-      { url: "/favicon.png", type: "image/png", sizes: "64x64", color: "#ffffff" },
-      { url: "/favicon.png", type: "image/png", sizes: "128x128", color: "#ffffff" },
-      { url: "/favicon.png", type: "image/png", sizes: "256x256", color: "#ffffff" },
+      { url: "/LuminaLiving/favicon.png", type: "image/png", sizes: "32x32", color: "#ffffff" },
+      { url: "/LuminaLiving/favicon.png", type: "image/png", sizes: "48x48", color: "#ffffff" },
+      { url: "/LuminaLiving/favicon.png", type: "image/png", sizes: "64x64", color: "#ffffff" },
+      { url: "/LuminaLiving/favicon.png", type: "image/png", sizes: "128x128", color: "#ffffff" },
+      { url: "/LuminaLiving/favicon.png", type: "image/png", sizes: "256x256", color: "#ffffff" },
     ],
   },
 };
@@ -43,7 +43,7 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
         {/* Site animations */}
-        <Script src="/script.js" strategy="afterInteractive" />
+        <Script src="/LuminaLiving/script.js" strategy="afterInteractive" />
       </body>
     </html>
   );

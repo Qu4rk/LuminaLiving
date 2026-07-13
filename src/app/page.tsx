@@ -82,7 +82,7 @@ export default function Home() {
       {/* Preloader */}
       <div className="preloader">
         <div className="preloader-content">
-          <img src="/luminaliving_logo.png" alt="Lumina Living" className="preloader-logo" />
+          <img src="/LuminaLiving/luminaliving_logo.png" alt="Lumina Living" className="preloader-logo" />
           <div className="preloader-text">Lumina Living</div>
         </div>
       </div>
@@ -91,7 +91,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className={`navbar ${scrolledPastHero ? "navbar-scrolled" : ""} ${isLoaded ? "is-loaded" : ""}`} id="navbar">
         <a href="#home" className="logo nav-anchor nav-reveal">
-          <img src="/luminaliving_logo.png" alt="Lumina Living" className="logo-img" />
+          <img src="/LuminaLiving/luminaliving_logo.png" alt="Lumina Living" className="logo-img" />
           Lumina Living
         </a>
         <ul className="nav-links nav-reveal">
@@ -107,16 +107,16 @@ export default function Home() {
       <header className="hero section" id="home">
         <div className="hero-video-wrapper">
           <video autoPlay muted playsInline className="hero-video active">
-            <source src="/assets/12049389_3840_2160_25fps.mp4" type="video/mp4" />
+            <source src="/LuminaLiving/assets/12049389_3840_2160_25fps.mp4" type="video/mp4" />
           </video>
           <video muted playsInline className="hero-video">
-            <source src="/assets/herovid2.mp4" type="video/mp4" />
+            <source src="/LuminaLiving/assets/herovid2.mp4" type="video/mp4" />
           </video>
           <video muted playsInline className="hero-video">
-            <source src="/assets/herovid3.mp4" type="video/mp4" />
+            <source src="/LuminaLiving/assets/herovid3.mp4" type="video/mp4" />
           </video>
           <video muted playsInline className="hero-video">
-            <source src="/assets/herovid4.mp4" type="video/mp4" />
+            <source src="/LuminaLiving/assets/herovid4.mp4" type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
         </div>
@@ -198,7 +198,7 @@ export default function Home() {
           {/* Feature 1: Image Left / Text Right */}
           <div className="feature-block">
             <div className="feature-image-wrap reveal-image">
-              <img src="/assets/marina2.png" alt="Curated interior space with coastal views" />
+              <img src="/LuminaLiving/assets/marina2.png" alt="Curated interior space with coastal views" />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">Curated Interior Identity</h3>
@@ -214,7 +214,7 @@ export default function Home() {
           {/* Feature 2: Image Right / Text Left */}
           <div className="feature-block reversed">
             <div className="feature-image-wrap reveal-image">
-              <img src="/assets/barista_station.png" alt="A high-end luxury espresso machine and barista station" />
+              <img src="/LuminaLiving/assets/barista_station.png" alt="A high-end luxury espresso machine and barista station" />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">The Ritual Corner</h3>
@@ -261,8 +261,8 @@ export default function Home() {
       {/* ── 5. THE COAST — Full Width Image ── */}
       <section className="full-image">
         <div className="full-image-inner reveal-image">
-          <img src="/assets/paraliakos-sunset.png" alt="Limassol coastal road at sunset" className="bg-img" />
-          <img src="/assets/paraliakos.png" alt="Limassol coastal road at golden hour" className="fg-img" />
+          <img src="/LuminaLiving/assets/paraliakos-sunset.png" alt="Limassol coastal road at sunset" className="bg-img" />
+          <img src="/LuminaLiving/assets/paraliakos.png" alt="Limassol coastal road at golden hour" className="fg-img" />
         </div>
         <h2 className="overlay-text">
           <span className="slide-swap-container">
@@ -319,16 +319,16 @@ export default function Home() {
             <button className="gallery-nav-btn next-btn" aria-label="Next image">&gt;</button>
             <div className="gallery-container" id="atmosphere-gallery">
               <div className="gallery-item" data-caption="Morning light on the promenade">
-                <img src="/assets/molos.jpeg" alt="Morning light on the promenade" />
+                <img src="/LuminaLiving/assets/molos.jpeg" alt="Morning light on the promenade" />
               </div>
               <div className="gallery-item" data-caption="Old port texture">
-                <img src="/assets/oldport.png" alt="Old port texture and stone" />
+                <img src="/LuminaLiving/assets/oldport.png" alt="Old port texture and stone" />
               </div>
               <div className="gallery-item" data-caption="Marina at dusk">
-                <img src="/assets/marina1.png" alt="Marina at dusk" />
+                <img src="/LuminaLiving/assets/marina1.png" alt="Marina at dusk" />
               </div>
               <div className="gallery-item" data-caption="Coastal stillness">
-                <img src="/assets/sunset.jpg" alt="Coastal stillness at golden hour" />
+                <img src="/LuminaLiving/assets/sunset.jpg" alt="Coastal stillness at golden hour" />
               </div>
             </div>
           </div>
@@ -460,7 +460,7 @@ export default function Home() {
           <div className="footer-upper">
 <div>
             <div className="footer-brand-group">
-            <img src="/luminaliving_logo.png" alt="Lumina Living" className="footer-logo-img" />
+            <img src="/LuminaLiving/luminaliving_logo.png" alt="Lumina Living" className="footer-logo-img" />
             <div className="footer-brand">Lumina Living</div>
             </div>
             <div className="footer-location chillax-copy">Limassol, Cyprus</div>
