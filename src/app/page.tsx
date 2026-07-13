@@ -45,6 +45,38 @@ export default function Home() {
     };
   }, []);
 
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+
+  const handleInquirySubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    setSubmitStatus('sending');
+    
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/inquire@lumina-living.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+      
+      if (response.ok) {
+        setSubmitStatus('sent');
+        form.reset();
+        setTimeout(() => setSubmitStatus('idle'), 3000);
+      } else {
+        setSubmitStatus('error');
+        setTimeout(() => setSubmitStatus('idle'), 3000);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 3000);
+    }
+  };
+
   return (
     <>
       {/* Preloader */}
@@ -354,13 +386,14 @@ export default function Home() {
               </p>
             </div>
 
-            <form className="inquiry-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="inquiry-form" onSubmit={handleInquirySubmit}>
               <div className="form-row">
                 <div className="form-group inquiry-field-wrap">
                   <label htmlFor="name">Full Name</label>
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     className="inquiry-field"
                     placeholder="Your full name"
                     required
@@ -371,6 +404,7 @@ export default function Home() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     className="inquiry-field"
                     placeholder="your@email.com"
                     required
@@ -384,13 +418,14 @@ export default function Home() {
                   <input
                     type="text"
                     id="customization"
+                    name="customization"
                     className="inquiry-field"
                     placeholder="e.g. Minimalist, Warm tones..."
                   />
                 </div>
                 <div className="form-group inquiry-field-wrap">
                   <label htmlFor="duration">Preferred Stay Duration</label>
-                  <select id="duration" className="inquiry-field" defaultValue="">
+                  <select id="duration" name="duration" className="inquiry-field" defaultValue="">
                     <option value="" disabled>Select duration (optional)</option>
                     <option value="3-7">3–7 days</option>
                     <option value="1-4">1–4 weeks</option>
@@ -402,7 +437,12 @@ export default function Home() {
               </div>
 
               <div className="inquiry-submit">
-                <button type="submit" className="btn-primary">Send Inquiry</button>
+                <button type="submit" className="btn-primary" disabled={submitStatus === 'sending'} style={{ fontWeight: submitStatus !== 'idle' ? 800 : undefined }}>
+                  {submitStatus === 'idle' && 'Send Inquiry'}
+                  {submitStatus === 'sending' && 'Sending...'}
+                  {submitStatus === 'sent' && '✓ Inquiry Sent!'}
+                  {submitStatus === 'error' && 'Error — Try Again'}
+                </button>
               </div>
             </form>
 
@@ -426,9 +466,8 @@ export default function Home() {
             <div className="footer-location chillax-copy">Limassol, Cyprus</div>
             </div>
             <div className="footer-links">
-              <a href="#" className="footer-link">WhatsApp</a>
-              <a href="#" className="footer-link">Instagram</a>
-              <a href="#" className="footer-link">Email</a>
+              <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="footer-link">WhatsApp</a>
+              <a href="https://instagram.com/your-username" target="_blank" rel="noopener noreferrer" className="footer-link">Instagram</a>
             </div>
           </div>
           <div className="footer-bottom">
