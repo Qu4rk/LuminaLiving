@@ -253,7 +253,7 @@ export default function Home() {
                 { text: 'Microclimate', description: 'Precision temperature control across four independent zones for personalized comfort.', image: '/LuminaLiving/assets/feature_microclimate_1782852308980.png' },
                 { text: 'Acoustic Envelope', description: 'Acoustic-grade, multi-layered glass ensuring absolute tranquility and thermal perfection.', image: '/LuminaLiving/assets/feature_acoustic_envelope_1782852327696.png' },
                 { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/LuminaLiving/assets/feature_light_orchestration_1782852343634.png' },
-                { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/LuminaLiving/assets/feature_sensory_architecture_1782852360965.png' }
+                { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/LuminaLiving/assets/Propertyphotooutside1.png' }
               ]} 
             />
           </div>
