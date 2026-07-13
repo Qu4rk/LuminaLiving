@@ -61,6 +61,7 @@ export default function Home() {
   }, []);
 
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [coastTapped, setCoastTapped] = useState(false);
 
   const handleInquirySubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -274,7 +275,7 @@ export default function Home() {
       </section>
 
       {/* ── 5. THE COAST — Full Width Image ── */}
-      <section className="full-image">
+      <section className={`full-image ${coastTapped ? 'coast-tapped' : ''}`} onClick={() => setCoastTapped(prev => !prev)}>
         <div className="full-image-inner reveal-image">
           <img src="/LuminaLiving/assets/paraliakos-sunset.png" alt="Limassol coastal road at sunset" className="bg-img" />
           <img src="/LuminaLiving/assets/paraliakos.png" alt="Limassol coastal road at golden hour" className="fg-img" />

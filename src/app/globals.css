@@ -955,6 +955,29 @@ input, select, textarea { font-family: var(--font-body); }
     animation: glowText 2.5s ease-in-out infinite;
 }
 
+/* ── Coast tap-toggle for touch devices ── */
+.coast-tapped .full-image-inner img.fg-img {
+    opacity: 0;
+    filter: blur(10px) brightness(1.2);
+    transform: scale(1.05);
+}
+
+.coast-tapped .full-image-inner img.bg-img {
+    filter: blur(0px) brightness(1);
+    transform: scale(1);
+}
+
+.coast-tapped .slide-swap-text {
+    transform: translateY(-1.5em);
+    opacity: 0;
+}
+
+.coast-tapped .slide-swap-alt {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    animation: glowText 2.5s ease-in-out infinite;
+}
+
 /* ==========================================================================
    Location
    ========================================================================== */
@@ -1311,20 +1334,43 @@ input, select, textarea { font-family: var(--font-body); }
         --section-gap: 4.5rem;
     }
 
+    /* ── Global touch refinements ── */
+    *,
+    *::before,
+    *::after {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ── Navigation ── */
     .navbar {
-        padding: 1rem var(--gutter);
+        padding: 0.8rem var(--gutter);
         grid-template-columns: 1fr 1fr;
+        padding-top: max(0.8rem, env(safe-area-inset-top));
     }
 
     .nav-links {
         display: none;
     }
 
-    .nav-cta {
-        font-size: 0.65rem;
-        padding: 0.6rem 1.2rem;
+    .logo {
+        font-size: 0; /* hide text, keep icon */
+        gap: 0;
     }
 
+    .logo-img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-cta {
+        font-size: 0.65rem;
+        padding: 0.7rem 1.4rem;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* ── Hero ── */
     .hero {
         height: 100svh;
         justify-content: center;
@@ -1332,26 +1378,90 @@ input, select, textarea { font-family: var(--font-body); }
         padding-top: 5vh;
     }
 
+    .hero-content {
+        padding: 0 var(--gutter);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .hero-title {
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+        max-width: 100%;
+        line-height: 1.15;
+    }
+
+    .rotating-text-wrapper {
+        min-width: 10ch;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        max-width: 32ch;
+    }
+
+    .hero-subtitle br {
+        display: none;
+    }
+
     .btn-primary {
         padding: 1rem 1.5rem;
         width: 100%;
         justify-content: center;
-    }
-
-    .hero-title {
-        font-size: clamp(2.4rem, 8vw, 3.2rem);
-        max-width: 100%;
-        line-height: 1.15;
-    }
-    
-    .rotating-text-wrapper {
-        min-width: 10ch;
+        min-height: 48px;
+        font-size: 0.8rem;
     }
 
     .hero-scroll-indicator {
         display: none;
     }
 
+    /* ── Feature Blocks ── */
+    .feature-block {
+        gap: 2.5rem;
+    }
+
+    .feature-image-wrap img {
+        aspect-ratio: 16 / 10;
+        border-radius: 4px;
+    }
+
+    .feature-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .feature-text p {
+        max-width: 100%;
+    }
+
+    /* ── Layered Comfort (Accordion Section) ── */
+    .feature-layered {
+        max-width: 100%;
+        padding: clamp(2.5rem, 6vw, 4rem) 0;
+    }
+
+    .feature-layered h3 {
+        text-align: left;
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    /* ── The Coast (Full Image) ── */
+    .full-image {
+        height: 60vh;
+        min-height: 360px;
+    }
+
+    .full-image .overlay-text {
+        font-size: clamp(2.8rem, 13vw, 4.5rem);
+    }
+
+    /* ── Location / Map ── */
+    .map-wrap {
+        height: 40vh;
+        min-height: 280px;
+        border-radius: 4px;
+    }
+
+    /* ── Atmosphere Gallery ── */
     .atmosphere-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1361,23 +1471,81 @@ input, select, textarea { font-family: var(--font-body); }
         margin-top: 0;
     }
 
+    .gallery-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding: 1rem var(--gutter);
+        gap: 12px;
+    }
+
+    .gallery-item {
+        flex: 0 0 85vw;
+        height: 56vw;
+        scroll-snap-align: center;
+        border-radius: 6px;
+    }
+
+    .gallery-nav-btn {
+        display: none;
+    }
+
+    /* ── Terms ── */
+    .terms-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+        padding: 1.25rem 0;
+    }
+
+    .terms-value {
+        text-align: left;
+    }
+
+    /* ── Inquiry Form ── */
     .form-row {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
-    .full-image .overlay-text {
-        font-size: clamp(3rem, 15vw, 5rem);
+
+    .form-group label {
+        font-size: 0.72rem;
+        margin-bottom: 0.5rem;
     }
 
+    .inquiry-field {
+        padding: 0.9rem 0;
+        font-size: 1rem;
+        min-height: 48px;
+    }
+
+    .inquiry-submit .btn-primary {
+        width: 100%;
+    }
+
+    /* ── Footer ── */
     .footer-upper {
         flex-direction: column;
-        gap: 2.5rem;
+        gap: 2rem;
     }
-    
+
     .footer-links {
         flex-wrap: wrap;
-        gap: 1.5rem;
+        gap: 1.2rem;
+    }
+
+    .footer-link svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 8px;
     }
 
     .footer-bottom {
@@ -1389,34 +1557,98 @@ input, select, textarea { font-family: var(--font-body); }
         text-align: left;
     }
 
-    .terms-item {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: flex-start;
+    .legal-links {
+        gap: 1.5rem !important;
+    }
+
+    .legal-links .footer-link {
+        min-width: unset;
+        min-height: unset;
+        padding: 0;
+    }
+
+    /* ── Custom cursor off ── */
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   Very Small Phones (iPhone SE, etc.)
+   ========================================================================== */
+@media (max-width: 480px) {
+    :root {
+        --gutter: 1rem;
+        --section-gap: 3.5rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.9rem, 7.5vw, 2.6rem);
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+        max-width: 28ch;
+    }
+
+    .section-heading {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+    }
+
+    .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+    }
+
+    .lead-text {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+    }
+
+    .body-text {
+        font-size: 0.92rem;
+    }
+
+    .gallery-item {
+        flex: 0 0 90vw;
+        height: 60vw;
+    }
+
+    .full-image {
+        height: 50vh;
+        min-height: 300px;
+    }
+
+    .full-image .overlay-text {
+        font-size: clamp(2.2rem, 12vw, 3.5rem);
+    }
+
+    .feature-layered h3 {
+        font-size: 1.4rem;
+    }
+
+    .terms-label {
+        font-size: 1rem;
     }
 
     .terms-value {
-        text-align: left;
+        font-size: 0.82rem;
     }
-    
-    .gallery-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 1rem;
+
+    .inquiry-inner {
+        max-width: 100%;
     }
-    
-    .gallery-item {
-        scroll-snap-align: center;
+
+    .map-wrap {
+        min-height: 240px;
     }
-    
-    .gallery-nav-btn {
-        display: none;
+
+    .preloader-logo {
+        width: 48px;
+        height: 48px;
     }
-    
-    /* Hide custom cursor on mobile just in case */
-    .custom-cursor {
-        display: none !important;
+
+    .preloader-text {
+        font-size: 0.7rem;
     }
 }
 
