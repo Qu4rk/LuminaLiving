@@ -440,7 +440,8 @@ window.initSiteAnimations = () => {
        INFINITE HORIZONTAL PARALLAX GALLERY
        ========================================================================== */
     const gallery = document.getElementById('atmosphere-gallery');
-    if (gallery && !prefersReduced) {
+    const isMobileGallery = window.matchMedia('(max-width: 768px)').matches;
+    if (gallery && !prefersReduced && !isMobileGallery) {
         const SNAP_ENABLED = true;
         const SNAP_DELAY = 150; 
         const SNAP_STRENGTH = 0.08;

@@ -1805,9 +1805,20 @@ input, select, textarea { font-family: var(--font-body); }
 }
 
 @media (max-width:768px) {
+    .feature-image-wrap img {
+        aspect-ratio: auto;
+        height: auto;
+    }
+    .gallery-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 2rem; /* space for scrollbar */
+    }
     .gallery-item {
         flex: 0 0 320px;
         height: 220px;
+        scroll-snap-align: center;
     }
     .gallery-nav-btn {
         width: 44px;
