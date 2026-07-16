@@ -223,7 +223,7 @@ export default function Home() {
           {/* Feature 1: Image Left / Text Right */}
           <div className="feature-block">
             <div className="feature-image-wrap reveal-image">
-              <img loading="lazy" decoding="async" src="/LuminaLiving/assets/bathroom.webp" alt="Curated bathroom interior space" />
+              <img loading="lazy" decoding="async" src="/LuminaLiving/assets/bathroom.webp" alt="Curated bathroom interior space" className="bathroom-img" />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">Curated Interior Identity</h3>

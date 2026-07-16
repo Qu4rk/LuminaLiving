@@ -639,6 +639,12 @@ input, select, textarea { font-family: var(--font-body); }
     transform: scale(1.03);
 }
 
+@media (max-width: 768px) {
+    .bathroom-img {
+        object-position: top center;
+    }
+}
+
 .feature-text {
     display: flex;
     flex-direction: column;
