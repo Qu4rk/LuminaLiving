@@ -1253,6 +1253,7 @@ input, select, textarea { font-family: var(--font-body); }
 .footer-links {
     display: flex;
     gap: 2rem;
+    justify-content: flex-end;
 }
 
 .footer-link {
@@ -1265,6 +1266,25 @@ input, select, textarea { font-family: var(--font-body); }
 
 .footer-link:hover {
     color: var(--text);
+}
+
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.whatsapp-link svg {
+    flex-shrink: 0;
+}
+
+.whatsapp-text {
+    font-family: 'Chillax', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: inherit;
 }
 
 .footer-bottom {

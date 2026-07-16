@@ -482,8 +482,10 @@ export default function Home() {
             <div className="footer-location chillax-copy">Limassol, Cyprus</div>
             </div>
             <div className="footer-links">
-              <a href="https://wa.me/35799191855" target="_blank" rel="noopener noreferrer" className="footer-link" aria-label="WhatsApp"><WhatsappIcon /></a>
-              <a href="https://instagram.com/your-username" target="_blank" rel="noopener noreferrer" className="footer-link" aria-label="Instagram"><InstagramIcon /></a>
+              <a href="https://wa.me/35799191855" target="_blank" rel="noopener noreferrer" className="footer-link whatsapp-link" aria-label="WhatsApp">
+                <WhatsappIcon />
+                <span className="whatsapp-text">WHATSAPP</span>
+              </a>
             </div>
           </div>
           <div className="footer-bottom">
