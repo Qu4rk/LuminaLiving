@@ -88,6 +88,9 @@ window.initSiteAnimations = () => {
     gsap.set('.hero-video-wrapper', { scale: 1.06 });
 
     if (preloader) {
+        // Disable scroll while preloader is active
+        document.body.style.overflow = 'hidden';
+
         // Fade in preloader logo and text
         gsap.to([preloaderLogo, preloaderText, preloaderDots], {
             opacity: 1,
@@ -103,6 +106,7 @@ window.initSiteAnimations = () => {
             ease: 'power2.inOut',
             onComplete: () => {
                 preloader.style.display = 'none';
+                document.body.style.overflow = ''; // Re-enable scroll
                 initHeroReveal();
             }
         });
