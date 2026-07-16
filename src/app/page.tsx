@@ -499,6 +499,9 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <div className="footer-signature">
+          <span className="footer-signature-text">Brought to life by Quark</span>
+        </div>
       </footer>
     </>
   );
