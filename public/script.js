@@ -81,6 +81,7 @@ window.initSiteAnimations = () => {
        ========================================================================== */
     const preloaderText = document.querySelector('.preloader-text');
     const preloaderLogo = document.querySelector('.preloader-logo');
+    const preloaderDots = document.querySelector('.preloader-dots');
     const preloader = document.querySelector('.preloader');
 
     // Prevent snapping by setting the initial scale immediately
@@ -88,7 +89,7 @@ window.initSiteAnimations = () => {
 
     if (preloader) {
         // Fade in preloader logo and text
-        gsap.to([preloaderLogo, preloaderText], {
+        gsap.to([preloaderLogo, preloaderText, preloaderDots], {
             opacity: 1,
             duration: DUR_NORMAL,
             ease: EASE_PRIMARY

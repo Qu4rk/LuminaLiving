@@ -5,6 +5,7 @@ import Link from "next/link";
 import SideRays from "@/components/animations/SideRays";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { FeatureAccordion } from "@/components/ui/FeatureAccordion";
+import { BouncingDots } from "@/components/ui/bouncing-dots";
 
 const WhatsappIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -105,8 +106,9 @@ export default function Home() {
       {/* Preloader */}
       <div className="preloader">
         <div className="preloader-content">
-          <img src="/LuminaLiving/luminaliving_logo.png" alt="Lumina Living" className="preloader-logo" />
-          <div className="preloader-text">Lumina Living</div>
+          <img src="/LuminaLiving/luminaliving_logo.webp" alt="Lumina Living" className="preloader-logo" />
+          <div className="preloader-text" style={{ marginBottom: '1rem' }}>Lumina Living</div>
+          <BouncingDots className="text-white/80 preloader-dots" />
         </div>
       </div>
 
@@ -114,7 +116,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className={`navbar ${scrolledPastHero ? "navbar-scrolled" : ""} ${isLoaded ? "is-loaded" : ""}`} id="navbar">
         <a href="#home" className="logo nav-anchor nav-reveal">
-          <img src="/LuminaLiving/luminaliving_logo.png" alt="Lumina Living" className="logo-img" />
+          <img src="/LuminaLiving/luminaliving_logo.webp" alt="Lumina Living" className="logo-img" />
           Lumina Living
         </a>
         <ul className="nav-links nav-reveal">
@@ -221,7 +223,7 @@ export default function Home() {
           {/* Feature 1: Image Left / Text Right */}
           <div className="feature-block">
             <div className="feature-image-wrap reveal-image">
-              <img src="/LuminaLiving/assets/bathroom.png" alt="Curated bathroom interior space" />
+              <img loading="lazy" decoding="async" src="/LuminaLiving/assets/bathroom.webp" alt="Curated bathroom interior space" />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">Curated Interior Identity</h3>
@@ -237,7 +239,7 @@ export default function Home() {
           {/* Feature 2: Image Right / Text Left */}
           <div className="feature-block reversed">
             <div className="feature-image-wrap reveal-image">
-              <img src="/LuminaLiving/assets/barista_station.png" alt="A high-end luxury espresso machine and barista station" />
+              <img loading="lazy" decoding="async" src="/LuminaLiving/assets/barista_station.webp" alt="A high-end luxury espresso machine and barista station" />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">The Ritual Corner</h3>
@@ -258,10 +260,10 @@ export default function Home() {
             </HeroHighlight>
             <FeatureAccordion 
               items={[
-                { text: 'Microclimate', description: 'Precision temperature control across four independent zones for personalized comfort.', image: '/LuminaLiving/assets/feature_microclimate_1782852308980.png' },
-                { text: 'Acoustic Envelope', description: 'Acoustic-grade, multi-layered glass ensuring absolute tranquility and thermal perfection.', image: '/LuminaLiving/assets/feature_acoustic_envelope_1782852327696.png' },
-                { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/LuminaLiving/assets/blackoutcurtains.png' },
-                { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/LuminaLiving/assets/Propertyphotooutside1.png' }
+                { text: 'Microclimate', description: 'Precision temperature control across four independent zones for personalized comfort.', image: '/LuminaLiving/assets/feature_microclimate_1782852308980.webp' },
+                { text: 'Acoustic Envelope', description: 'Acoustic-grade, multi-layered glass ensuring absolute tranquility and thermal perfection.', image: '/LuminaLiving/assets/feature_acoustic_envelope_1782852327696.webp' },
+                { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/LuminaLiving/assets/blackoutcurtains.webp' },
+                { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/LuminaLiving/assets/Propertyphotooutside1.webp' }
               ]} 
             />
           </div>
@@ -284,8 +286,8 @@ export default function Home() {
       {/* ── 5. THE COAST — Full Width Image ── */}
       <section className={`full-image ${coastTapped ? 'coast-tapped' : ''}`} onClick={() => setCoastTapped(prev => !prev)}>
         <div className="full-image-inner reveal-image">
-          <img src="/LuminaLiving/assets/paraliakos-sunset.png" alt="Limassol coastal road at sunset" className="bg-img" />
-          <img src="/LuminaLiving/assets/paraliakos.png" alt="Limassol coastal road at golden hour" className="fg-img" />
+          <img loading="lazy" decoding="async" src="/LuminaLiving/assets/paraliakos-sunset.webp" alt="Limassol coastal road at sunset" className="bg-img" />
+          <img loading="lazy" decoding="async" src="/LuminaLiving/assets/paraliakos.webp" alt="Limassol coastal road at golden hour" className="fg-img" />
         </div>
         <h2 className="overlay-text">
           <span className="slide-swap-container">
@@ -342,28 +344,28 @@ export default function Home() {
             <button className="gallery-nav-btn next-btn" aria-label="Next image">&gt;</button>
             <div className="gallery-container" id="atmosphere-gallery">
               <div className="gallery-item" data-caption="Twilight on the docks">
-                <img src="/LuminaLiving/assets/atmosphere_3.jpg" alt="Twilight on the docks" />
+                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_3.webp" alt="Twilight on the docks" />
               </div>
               <div className="gallery-item" data-caption="Mediterranean water texture">
-                <img src="/LuminaLiving/assets/atmosphere_4.jpg" alt="Mediterranean water texture" />
+                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_4.webp" alt="Mediterranean water texture" />
               </div>
               <div className="gallery-item" data-caption="Golden hour coastal highway">
-                <img src="/LuminaLiving/assets/atmosphere_5.jpg" alt="Golden hour coastal highway" />
+                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_5.webp" alt="Golden hour coastal highway" />
               </div>
               <div className="gallery-item" data-caption="Warm shoreline evening">
-                <img src="/LuminaLiving/assets/atmosphere_6.jpg" alt="Warm shoreline evening" />
+                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_6.webp" alt="Warm shoreline evening" />
               </div>
               <div className="gallery-item" data-caption="Stones along the surf">
-                <img src="/LuminaLiving/assets/atmosphere_7.jpg" alt="Stones along the surf" />
+                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_7.webp" alt="Stones along the surf" />
               </div>
               <div className="gallery-item" data-caption="Minimalist horizon gradient">
-                <img src="/LuminaLiving/assets/atmosphere_8.jpg" alt="Minimalist horizon gradient" />
+                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_8.webp" alt="Minimalist horizon gradient" />
               </div>
               <div className="gallery-item" data-caption="Limassol coastline view">
-                <img src="/LuminaLiving/assets/atmosphere_9.jpg" alt="Limassol coastline view" />
+                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_9.webp" alt="Limassol coastline view" />
               </div>
               <div className="gallery-item" data-caption="Coastal dusk architecture">
-                <img src="/LuminaLiving/assets/atmosphere_10.jpg" alt="Coastal dusk architecture" />
+                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_10.webp" alt="Coastal dusk architecture" />
               </div>
             </div>
           </div>
@@ -495,7 +497,7 @@ export default function Home() {
           <div className="footer-upper">
             <div className="footer-column brand-col">
               <div className="footer-brand-group">
-                <img src="/LuminaLiving/luminaliving_logo.png" alt="Lumina Living" className="footer-logo-img" />
+                <img loading="lazy" decoding="async" src="/LuminaLiving/luminaliving_logo.webp" alt="Lumina Living" className="footer-logo-img" />
                 <div className="footer-brand">Lumina Living</div>
               </div>
             </div>

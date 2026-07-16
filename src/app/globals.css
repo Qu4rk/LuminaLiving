@@ -228,6 +228,11 @@ input, select, textarea { font-family: var(--font-body); }
     opacity: 0;
 }
 
+.preloader-dots {
+    opacity: 0;
+}
+
+
 .preloader-content {
     display: flex;
     flex-direction: column;
@@ -1746,7 +1751,7 @@ input, select, textarea { font-family: var(--font-body); }
     will-change: transform;
 }
 
-.gallery-item img[src*="atmosphere_8.jpg"] {
+.gallery-item img[src*="atmosphere_8.webp"] {
     object-position: center bottom;
 }
 
