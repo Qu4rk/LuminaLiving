@@ -21,6 +21,13 @@ const InstagramIcon = () => (
   </svg>
 );
 
+const MailIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+  </svg>
+);
+
 export default function Home() {
   const [scrolledPastHero, setScrolledPastHero] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -214,7 +221,7 @@ export default function Home() {
           {/* Feature 1: Image Left / Text Right */}
           <div className="feature-block">
             <div className="feature-image-wrap reveal-image">
-              <img src="/LuminaLiving/assets/marina2.png" alt="Curated interior space with coastal views" />
+              <img src="/LuminaLiving/assets/bathroom.png" alt="Curated bathroom interior space" />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">Curated Interior Identity</h3>
@@ -253,7 +260,7 @@ export default function Home() {
               items={[
                 { text: 'Microclimate', description: 'Precision temperature control across four independent zones for personalized comfort.', image: '/LuminaLiving/assets/feature_microclimate_1782852308980.png' },
                 { text: 'Acoustic Envelope', description: 'Acoustic-grade, multi-layered glass ensuring absolute tranquility and thermal perfection.', image: '/LuminaLiving/assets/feature_acoustic_envelope_1782852327696.png' },
-                { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/LuminaLiving/assets/feature_light_orchestration_1782852343634.png' },
+                { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/LuminaLiving/assets/blackoutcurtains.png' },
                 { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/LuminaLiving/assets/Propertyphotooutside1.png' }
               ]} 
             />
@@ -334,17 +341,29 @@ export default function Home() {
             <button className="gallery-nav-btn prev-btn" aria-label="Previous image">&lt;</button>
             <button className="gallery-nav-btn next-btn" aria-label="Next image">&gt;</button>
             <div className="gallery-container" id="atmosphere-gallery">
-              <div className="gallery-item" data-caption="Morning light on the promenade">
-                <img src="/LuminaLiving/assets/molos.jpeg" alt="Morning light on the promenade" />
+              <div className="gallery-item" data-caption="Twilight on the docks">
+                <img src="/LuminaLiving/assets/atmosphere_3.jpg" alt="Twilight on the docks" />
               </div>
-              <div className="gallery-item" data-caption="Old port texture">
-                <img src="/LuminaLiving/assets/oldport.png" alt="Old port texture and stone" />
+              <div className="gallery-item" data-caption="Mediterranean water texture">
+                <img src="/LuminaLiving/assets/atmosphere_4.jpg" alt="Mediterranean water texture" />
               </div>
-              <div className="gallery-item" data-caption="Marina at dusk">
-                <img src="/LuminaLiving/assets/marina1.png" alt="Marina at dusk" />
+              <div className="gallery-item" data-caption="Golden hour coastal highway">
+                <img src="/LuminaLiving/assets/atmosphere_5.jpg" alt="Golden hour coastal highway" />
               </div>
-              <div className="gallery-item" data-caption="Coastal stillness">
-                <img src="/LuminaLiving/assets/sunset.jpg" alt="Coastal stillness at golden hour" />
+              <div className="gallery-item" data-caption="Warm shoreline evening">
+                <img src="/LuminaLiving/assets/atmosphere_6.jpg" alt="Warm shoreline evening" />
+              </div>
+              <div className="gallery-item" data-caption="Stones along the surf">
+                <img src="/LuminaLiving/assets/atmosphere_7.jpg" alt="Stones along the surf" />
+              </div>
+              <div className="gallery-item" data-caption="Minimalist horizon gradient">
+                <img src="/LuminaLiving/assets/atmosphere_8.jpg" alt="Minimalist horizon gradient" />
+              </div>
+              <div className="gallery-item" data-caption="Limassol coastline view">
+                <img src="/LuminaLiving/assets/atmosphere_9.jpg" alt="Limassol coastline view" />
+              </div>
+              <div className="gallery-item" data-caption="Coastal dusk architecture">
+                <img src="/LuminaLiving/assets/atmosphere_10.jpg" alt="Coastal dusk architecture" />
               </div>
             </div>
           </div>
@@ -474,18 +493,39 @@ export default function Home() {
       <footer className="site-footer">
         <div className="container">
           <div className="footer-upper">
-<div>
-            <div className="footer-brand-group">
-            <img src="/LuminaLiving/luminaliving_logo.png" alt="Lumina Living" className="footer-logo-img" />
-            <div className="footer-brand">Lumina Living</div>
+            <div className="footer-column brand-col">
+              <div className="footer-brand-group">
+                <img src="/LuminaLiving/luminaliving_logo.png" alt="Lumina Living" className="footer-logo-img" />
+                <div className="footer-brand">Lumina Living</div>
+              </div>
             </div>
-            <div className="footer-location chillax-copy">Limassol, Cyprus</div>
+
+            <div className="footer-column">
+              <div className="footer-col-label">[ Sections ]</div>
+              <ul className="footer-col-links">
+                <li><a href="#home" className="footer-col-link nav-anchor">Top</a></li>
+                <li><a href="#residence" className="footer-col-link nav-anchor">Residence</a></li>
+                <li><a href="#signatures" className="footer-col-link nav-anchor">Signatures</a></li>
+                <li><a href="#location" className="footer-col-link nav-anchor">Location</a></li>
+              </ul>
             </div>
-            <div className="footer-links">
-              <a href="https://wa.me/35799191855" target="_blank" rel="noopener noreferrer" className="footer-link whatsapp-link" aria-label="WhatsApp">
-                <WhatsappIcon />
-                <span className="whatsapp-text">WHATSAPP</span>
-              </a>
+
+            <div className="footer-column">
+              <div className="footer-col-label">[ Connect ]</div>
+              <ul className="footer-col-links">
+                <li>
+                  <a href="https://wa.me/35799191855" target="_blank" rel="noopener noreferrer" className="footer-col-link whatsapp-link" aria-label="WhatsApp">
+                    <WhatsappIcon />
+                    <span className="whatsapp-text">WHATSAPP</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#inquiry" className="footer-col-link email-link nav-anchor" aria-label="Email Inquiry">
+                    <MailIcon />
+                    <span className="email-text">EMAIL</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="footer-bottom">

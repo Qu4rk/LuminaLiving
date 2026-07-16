@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
             If you have any questions about this Privacy Policy or wish to exercise your data protection rights, please contact us at:
           </p>
           <p>
-            <strong>Email:</strong> legal@luminaliving.com
+            <strong>Email:</strong> inquire@lumina-living.net
           </p>
         </div>
       </main>

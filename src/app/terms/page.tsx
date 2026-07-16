@@ -74,7 +74,7 @@ export default function TermsAndConditions() {
             For any questions regarding these Terms & Conditions, please contact us prior to booking at:
           </p>
           <p>
-            <strong>Email:</strong> legal@luminaliving.com
+            <strong>Email:</strong> inquire@lumina-living.net
           </p>
         </div>
       </main>

@@ -1187,7 +1187,7 @@ input, select, textarea { font-family: var(--font-body); }
 
 .inquiry-submit {
     margin-top: 1rem;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .inquiry-disclaimer {
@@ -1209,27 +1209,64 @@ input, select, textarea { font-family: var(--font-body); }
 }
 
 .footer-upper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
     margin-bottom: clamp(4rem, 6vw, 6rem);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-col-label {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+}
+
+.footer-col-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-col-link {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-col-link:hover {
+    color: var(--text);
 }
 
 .footer-brand {
     font-family: var(--font-body);
-    font-size: 0.75rem;
+    font-size: 1.35rem;
     font-weight: 500;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--text);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0;
 }
 
 .footer-brand-group {
     display: flex;
     align-items: center;
-    gap: 0.65rem;
-    margin-bottom: 0.8rem;
+    gap: 1.1rem;
 }
 
 .footer-brand-group .footer-brand {
@@ -1237,10 +1274,14 @@ input, select, textarea { font-family: var(--font-body); }
 }
 
 .footer-logo-img {
-    width: 28px;
-    height: 28px;
+    width: 54px;
+    height: 54px;
     object-fit: contain;
     flex-shrink: 0;
+}
+
+.brand-col {
+    align-self: center;
 }
 
 .footer-location {
@@ -1250,35 +1291,25 @@ input, select, textarea { font-family: var(--font-body); }
     font-style: italic;
 }
 
-.footer-links {
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-end;
-}
-
-.footer-link {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--text-muted);
-    transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-    color: var(--text);
-}
-
-.whatsapp-link {
+.whatsapp-link,
+.instagram-link,
+.email-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.whatsapp-link svg {
+.whatsapp-link svg,
+.instagram-link svg,
+.email-link svg {
     flex-shrink: 0;
+    width: 20px;
+    height: 20px;
 }
 
-.whatsapp-text {
+.whatsapp-text,
+.instagram-text,
+.email-text {
     font-family: 'Chillax', 'Helvetica Neue', sans-serif;
     font-weight: 500;
     font-size: 0.65rem;
@@ -1550,27 +1581,16 @@ input, select, textarea { font-family: var(--font-body); }
 
     /* ── Footer ── */
     .footer-upper {
-        flex-direction: column;
-        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem 2rem;
     }
 
-    .footer-links {
-        flex-wrap: wrap;
-        gap: 1.2rem;
+    .footer-column.brand-col {
+        grid-column: span 2;
     }
 
-    .footer-link svg {
-        width: 28px;
-        height: 28px;
-    }
-
-    .footer-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 48px;
-        min-height: 48px;
-        padding: 8px;
+    .footer-col-link {
+        padding: 4px 0;
     }
 
     .footer-bottom {
@@ -1605,6 +1625,15 @@ input, select, textarea { font-family: var(--font-body); }
     :root {
         --gutter: 1rem;
         --section-gap: 3.5rem;
+    }
+
+    .footer-upper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-column.brand-col {
+        grid-column: span 1;
     }
 
     .hero-title {
@@ -1715,6 +1744,10 @@ input, select, textarea { font-family: var(--font-body); }
     object-fit: cover;
     transform: translate(-50%, -50%);
     will-change: transform;
+}
+
+.gallery-item img[src*="atmosphere_8.jpg"] {
+    object-position: center bottom;
 }
 
 /* Nav Buttons */
