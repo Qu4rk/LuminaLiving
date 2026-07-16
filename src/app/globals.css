@@ -1281,20 +1281,13 @@ input, select, textarea { font-family: var(--font-body); }
     text-align: right;
 }
 
-.footer-signature {
-    margin-top: clamp(2rem, 4vw, 3rem);
-    text-align: center;
-}
-
-.footer-signature-text {
-    font-family: 'Chillax', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    font-size: clamp(0.65rem, 0.9vw, 0.8rem);
-    letter-spacing: 0.2em;
+.footer-bottom-left .footer-signature-text {
+    margin-top: 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--text);
-    opacity: 0.7;
-    display: inline-block;
+    color: var(--text-muted);
+    opacity: 0.8;
 }
 
 /* ==========================================================================
