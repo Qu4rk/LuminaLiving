@@ -107,6 +107,7 @@ window.initSiteAnimations = () => {
             onComplete: () => {
                 preloader.style.display = 'none';
                 document.body.style.overflow = ''; // Re-enable scroll
+                document.body.classList.remove('no-scroll');
                 initHeroReveal();
             }
         });
