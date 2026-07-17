@@ -471,7 +471,7 @@ export default function Home() {
                   <label htmlFor="duration">Preferred Stay Duration</label>
                   <select id="duration" name="duration" className="inquiry-field" defaultValue="">
                     <option value="" disabled>Select duration (optional)</option>
-                    <option value="3-7">3–7 days</option>
+                    <option value="5-7">5–7 days</option>
                     <option value="1-4">1–4 weeks</option>
                     <option value="1-6">1–6 months</option>
                     <option value="6-12">6–12 months</option>
