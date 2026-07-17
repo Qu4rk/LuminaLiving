@@ -99,19 +99,46 @@ window.initSiteAnimations = () => {
             ease: EASE_PRIMARY
         });
 
-        // Fade out preloader, then init hero
-        gsap.to(preloader, {
-            opacity: 0,
-            duration: DUR_NORMAL,
-            delay: 1.6,
-            ease: 'power2.inOut',
-            onComplete: () => {
-                preloader.style.display = 'none';
-                document.body.style.overflow = ''; // Re-enable scroll
-                document.body.classList.remove('no-scroll');
-                initHeroReveal();
+        let preloaderDismissed = false;
+        const MIN_PRELOADER_TIME = 1200; // Force preloader to show for at least 1.2s
+        const MAX_PRELOADER_TIME = 6000; // Fallback so we don't get stuck forever
+        const startTime = Date.now();
+
+        function dismissPreloader() {
+            if (preloaderDismissed) return;
+            const elapsed = Date.now() - startTime;
+            
+            // If the video loaded too fast, wait for the minimum aesthetic time
+            if (elapsed < MIN_PRELOADER_TIME) {
+                setTimeout(dismissPreloader, MIN_PRELOADER_TIME - elapsed);
+                return;
             }
-        });
+            
+            preloaderDismissed = true;
+            gsap.to(preloader, {
+                opacity: 0,
+                duration: DUR_NORMAL,
+                ease: 'power2.inOut',
+                onComplete: () => {
+                    preloader.style.display = 'none';
+                    document.body.style.overflow = ''; // Re-enable scroll
+                    document.body.classList.remove('no-scroll');
+                    initHeroReveal();
+                }
+            });
+        }
+
+        const activeVideo = document.querySelector('.hero-video.active');
+        if (activeVideo && activeVideo.readyState < 3) {
+            // Wait for video to have enough data to play frames
+            activeVideo.addEventListener('canplay', dismissPreloader, { once: true });
+            activeVideo.addEventListener('playing', dismissPreloader, { once: true });
+            // Fallback timeout
+            setTimeout(dismissPreloader, MAX_PRELOADER_TIME);
+        } else {
+            // Video is already cached/ready
+            dismissPreloader();
+        }
     } else {
         initHeroReveal();
     }
