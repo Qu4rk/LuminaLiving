@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Lumina Living",
   description:
-    "A private three-level residence on the Limassol shoreline. Considered interiors, coastal proximity, curated stays from 3 days to a full year.",
+    "A private three-level residence on the Limassol shoreline. Considered interiors, coastal proximity, curated stays from 5 days to a full year.",
   icons: {
     icon: [
       { url: "/LuminaLiving/favicon.webp", type: "image/png", sizes: "32x32", color: "#ffffff" },

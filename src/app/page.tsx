@@ -163,7 +163,7 @@ export default function Home() {
           </h1>
           <p className="hero-subtitle">
             An ultra-exclusive coastal haven engineered for absolute, uncompromising comfort.<br />
-            A bespoke sanctuary offering profound serenity and effortless living, from 3 days to a full year.
+            A bespoke sanctuary offering profound serenity and effortless living, from 5 days to a full year.
           </p>
           <div className="hero-cta">
             <a href="#inquiry" className="btn-primary nav-anchor">Begin a Private Inquiry</a>
@@ -397,7 +397,7 @@ export default function Home() {
               </li>
               <li className="terms-item reveal-copy">
                 <span className="terms-label">Minimum Stay</span>
-                <span className="terms-value">3 days</span>
+                <span className="terms-value">5 days</span>
               </li>
               <li className="terms-item reveal-copy">
                 <span className="terms-label">Maximum Stay</span>
