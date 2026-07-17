@@ -1837,6 +1837,8 @@ input, select, textarea { font-family: var(--font-body); }
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         padding-bottom: 2rem; /* space for scrollbar */
+        touch-action: pan-x pan-y;
+        pointer-events: auto !important;
     }
     .gallery-item {
         flex: 0 0 320px;
