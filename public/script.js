@@ -6,6 +6,8 @@
 
 window.initSiteAnimations = () => {
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({ ignoreMobileResize: true });
+    ScrollTrigger.normalizeScroll(true);
 
     // Register ScrollToPlugin if available
     if (typeof ScrollToPlugin !== 'undefined') {
