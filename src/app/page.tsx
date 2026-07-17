@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { ChevronDown } from "lucide-react";
 import SideRays from "@/components/animations/SideRays";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { FeatureAccordion } from "@/components/ui/FeatureAccordion";
@@ -170,8 +171,14 @@ export default function Home() {
         </div>
 
         <div className="hero-scroll-indicator">
-          <span className="scroll-line"></span>
-          <span>Scroll</span>
+          {[0, 1, 2].map((i) => (
+            <ChevronDown
+              key={i}
+              strokeWidth={1.5}
+              className="anim-chev"
+              style={{ animationDelay: `${i * 0.18}s` }}
+            />
+          ))}
         </div>
       </header>
 
