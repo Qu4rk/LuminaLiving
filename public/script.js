@@ -200,19 +200,31 @@ window.initSiteAnimations = () => {
        ========================================================================== */
     const navbar = document.getElementById('navbar');
     if (navbar) {
-        ScrollTrigger.create({
-            start: 'top top',
-            end: 'max',
-            onUpdate: (self) => {
-                if (self.direction === 1 && self.scroll() > 100) {
-                    // Scrolling down
-                    gsap.to(navbar, { yPercent: -100, autoAlpha: 0, duration: 0.6, ease: EASE_PRIMARY, overwrite: 'auto' });
-                } else if (self.direction === -1) {
-                    // Scrolling up
-                    gsap.to(navbar, { yPercent: 0, autoAlpha: 1, duration: 0.6, ease: EASE_PRIMARY, overwrite: 'auto' });
-                }
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const currentScrollY = window.scrollY;
+                    if (currentScrollY > 100) {
+                        if (currentScrollY > lastScrollY) {
+                            // Scrolling down
+                            gsap.to(navbar, { yPercent: -100, autoAlpha: 0, duration: 0.6, ease: EASE_PRIMARY, overwrite: 'auto' });
+                        } else {
+                            // Scrolling up
+                            gsap.to(navbar, { yPercent: 0, autoAlpha: 1, duration: 0.6, ease: EASE_PRIMARY, overwrite: 'auto' });
+                        }
+                    } else {
+                        // At top
+                        gsap.to(navbar, { yPercent: 0, autoAlpha: 1, duration: 0.6, ease: EASE_PRIMARY, overwrite: 'auto' });
+                    }
+                    lastScrollY = currentScrollY;
+                    ticking = false;
+                });
+                ticking = true;
             }
-        });
+        }, { passive: true });
     }
 
     /* ==========================================================================
