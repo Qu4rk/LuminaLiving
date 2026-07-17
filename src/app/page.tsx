@@ -353,9 +353,7 @@ export default function Home() {
               <div className="gallery-item" data-caption="Twilight on the docks">
                 <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_3.webp" alt="Twilight on the docks" />
               </div>
-              <div className="gallery-item" data-caption="Mediterranean water texture">
-                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_4.webp" alt="Mediterranean water texture" />
-              </div>
+
               <div className="gallery-item" data-caption="Golden hour coastal highway">
                 <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_5.webp" alt="Golden hour coastal highway" />
               </div>
