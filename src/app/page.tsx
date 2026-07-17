@@ -107,7 +107,7 @@ export default function Home() {
       {/* Preloader */}
       <div className="preloader">
         <div className="preloader-content">
-          <img src="/LuminaLiving/luminaliving_logo.webp" alt="Lumina Living" className="preloader-logo" />
+          <img src="/luminaliving_logo.webp" alt="Lumina Living" className="preloader-logo" />
           <div className="preloader-text" style={{ marginBottom: '1rem' }}>Lumina Living</div>
           <BouncingDots className="text-white/80 preloader-dots" />
         </div>
@@ -117,7 +117,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className={`navbar ${scrolledPastHero ? "navbar-scrolled" : ""} ${isLoaded ? "is-loaded" : ""}`} id="navbar">
         <a href="#home" className="logo nav-anchor nav-reveal">
-          <img src="/LuminaLiving/luminaliving_logo.webp" alt="Lumina Living" className="logo-img" />
+          <img src="/luminaliving_logo.webp" alt="Lumina Living" className="logo-img" />
           Lumina Living
         </a>
         <ul className="nav-links nav-reveal">
@@ -133,16 +133,16 @@ export default function Home() {
       <header className="hero section" id="home">
         <div className="hero-video-wrapper">
           <video autoPlay muted playsInline className="hero-video active">
-            <source src="/LuminaLiving/assets/12049389_3840_2160_25fps.mp4" type="video/mp4" />
+            <source src="/assets/12049389_3840_2160_25fps.mp4" type="video/mp4" />
           </video>
           <video muted playsInline className="hero-video">
-            <source src="/LuminaLiving/assets/herovid2.mp4" type="video/mp4" />
+            <source src="/assets/herovid2.mp4" type="video/mp4" />
           </video>
           <video muted playsInline className="hero-video">
-            <source src="/LuminaLiving/assets/herovid3.mp4" type="video/mp4" />
+            <source src="/assets/herovid3.mp4" type="video/mp4" />
           </video>
           <video muted playsInline className="hero-video">
-            <source src="/LuminaLiving/assets/herovid4.mp4" type="video/mp4" />
+            <source src="/assets/herovid4.mp4" type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
         </div>
@@ -230,7 +230,7 @@ export default function Home() {
           {/* Feature 1: Image Left / Text Right */}
           <div className="feature-block">
             <div className="feature-image-wrap reveal-image">
-              <img loading="lazy" decoding="async" src="/LuminaLiving/assets/bathroom.webp" alt="Curated bathroom interior space" className="bathroom-img" />
+              <img loading="lazy" decoding="async" src="/assets/bathroom.webp" alt="Curated bathroom interior space" className="bathroom-img" />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">Curated Interior Identity</h3>
@@ -246,7 +246,7 @@ export default function Home() {
           {/* Feature 2: Image Right / Text Left */}
           <div className="feature-block reversed">
             <div className="feature-image-wrap reveal-image">
-              <img loading="lazy" decoding="async" src="/LuminaLiving/assets/barista_station.webp" alt="A high-end luxury espresso machine and barista station" />
+              <img loading="lazy" decoding="async" src="/assets/barista_station.webp" alt="A high-end luxury espresso machine and barista station" />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">The Ritual Corner</h3>
@@ -267,10 +267,10 @@ export default function Home() {
             </HeroHighlight>
             <FeatureAccordion 
               items={[
-                { text: 'Microclimate', description: 'Precision temperature control across four independent zones for personalized comfort.', image: '/LuminaLiving/assets/feature_microclimate_1782852308980.webp' },
-                { text: 'Acoustic Envelope', description: 'Acoustic-grade, multi-layered glass ensuring absolute tranquility and thermal perfection.', image: '/LuminaLiving/assets/feature_acoustic_envelope_1782852327696.webp' },
-                { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/LuminaLiving/assets/lightorchestration.webp' },
-                { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/LuminaLiving/assets/sensoryarchitecture.webp' }
+                { text: 'Microclimate', description: 'Precision temperature control across four independent zones for personalized comfort.', image: '/assets/feature_microclimate_1782852308980.webp' },
+                { text: 'Acoustic Envelope', description: 'Acoustic-grade, multi-layered glass ensuring absolute tranquility and thermal perfection.', image: '/assets/feature_acoustic_envelope_1782852327696.webp' },
+                { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/assets/lightorchestration.webp' },
+                { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/assets/sensoryarchitecture.webp' }
               ]} 
             />
           </div>
@@ -293,8 +293,8 @@ export default function Home() {
       {/* ── 5. THE COAST — Full Width Image ── */}
       <section className={`full-image ${coastTapped ? 'coast-tapped' : ''}`} onClick={() => setCoastTapped(prev => !prev)}>
         <div className="full-image-inner reveal-image">
-          <img loading="lazy" decoding="async" src="/LuminaLiving/assets/paraliakos-sunset.webp" alt="Limassol coastal road at sunset" className="bg-img" />
-          <img loading="lazy" decoding="async" src="/LuminaLiving/assets/paraliakos.webp" alt="Limassol coastal road at golden hour" className="fg-img" />
+          <img loading="lazy" decoding="async" src="/assets/paraliakos-sunset.webp" alt="Limassol coastal road at sunset" className="bg-img" />
+          <img loading="lazy" decoding="async" src="/assets/paraliakos.webp" alt="Limassol coastal road at golden hour" className="fg-img" />
         </div>
         <h2 className="overlay-text">
           <span className="slide-swap-container">
@@ -351,26 +351,26 @@ export default function Home() {
             <button className="gallery-nav-btn next-btn" aria-label="Next image">&gt;</button>
             <div className="gallery-container" id="atmosphere-gallery">
               <div className="gallery-item" data-caption="Twilight on the docks">
-                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_3.webp" alt="Twilight on the docks" />
+                <img loading="lazy" decoding="async" src="/assets/atmosphere_3.webp" alt="Twilight on the docks" />
               </div>
 
               <div className="gallery-item" data-caption="Golden hour coastal highway">
-                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_5.webp" alt="Golden hour coastal highway" />
+                <img loading="lazy" decoding="async" src="/assets/atmosphere_5.webp" alt="Golden hour coastal highway" />
               </div>
               <div className="gallery-item" data-caption="Warm shoreline evening">
-                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_6.webp" alt="Warm shoreline evening" />
+                <img loading="lazy" decoding="async" src="/assets/atmosphere_6.webp" alt="Warm shoreline evening" />
               </div>
               <div className="gallery-item" data-caption="Stones along the surf">
-                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_7.webp" alt="Stones along the surf" />
+                <img loading="lazy" decoding="async" src="/assets/atmosphere_7.webp" alt="Stones along the surf" />
               </div>
               <div className="gallery-item" data-caption="Minimalist horizon gradient">
-                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_8.webp" alt="Minimalist horizon gradient" />
+                <img loading="lazy" decoding="async" src="/assets/atmosphere_8.webp" alt="Minimalist horizon gradient" />
               </div>
               <div className="gallery-item" data-caption="Limassol coastline view">
-                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_9.webp" alt="Limassol coastline view" />
+                <img loading="lazy" decoding="async" src="/assets/atmosphere_9.webp" alt="Limassol coastline view" />
               </div>
               <div className="gallery-item" data-caption="Coastal dusk architecture">
-                <img loading="lazy" decoding="async" src="/LuminaLiving/assets/atmosphere_10.webp" alt="Coastal dusk architecture" />
+                <img loading="lazy" decoding="async" src="/assets/atmosphere_10.webp" alt="Coastal dusk architecture" />
               </div>
             </div>
           </div>
@@ -502,7 +502,7 @@ export default function Home() {
           <div className="footer-upper">
             <div className="footer-column brand-col">
               <div className="footer-brand-group">
-                <img loading="lazy" decoding="async" src="/LuminaLiving/luminaliving_logo.webp" alt="Lumina Living" className="footer-logo-img" />
+                <img loading="lazy" decoding="async" src="/luminaliving_logo.webp" alt="Lumina Living" className="footer-logo-img" />
                 <div className="footer-brand">Lumina Living</div>
               </div>
             </div>

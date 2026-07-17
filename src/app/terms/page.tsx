@@ -10,7 +10,7 @@ export default function TermsAndConditions() {
     <div className="legal-page">
       <nav className="legal-nav">
         <Link href="/" className="logo">
-          <img src="/LuminaLiving/luminaliving_logo.webp" alt="Lumina Living" className="logo-img" />
+          <img src="/luminaliving_logo.webp" alt="Lumina Living" className="logo-img" />
           Lumina Living
         </Link>
       </nav>
