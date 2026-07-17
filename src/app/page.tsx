@@ -79,7 +79,7 @@ export default function Home() {
     setSubmitStatus('sending');
     
     try {
-      const response = await fetch("https://formsubmit.co/ajax/inquire@lumina-living.com", {
+      const response = await fetch("https://formsubmit.co/ajax/inquire@lumina-living.net", {
         method: "POST",
         headers: { 
             'Content-Type': 'application/json',
