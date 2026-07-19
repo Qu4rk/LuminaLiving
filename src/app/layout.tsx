@@ -14,11 +14,10 @@ export const metadata: Metadata = {
     "A private three-level residence on the Limassol shoreline. Considered interiors, coastal proximity, curated stays from 5 days to a full year.",
   icons: {
     icon: [
-      { url: "/favicon.webp", type: "image/png", sizes: "32x32", color: "#ffffff" },
-      { url: "/favicon.webp", type: "image/png", sizes: "48x48", color: "#ffffff" },
-      { url: "/favicon.webp", type: "image/png", sizes: "64x64", color: "#ffffff" },
-      { url: "/favicon.webp", type: "image/png", sizes: "128x128", color: "#ffffff" },
-      { url: "/favicon.webp", type: "image/png", sizes: "256x256", color: "#ffffff" },
+      { url: "/favicon.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon.png", type: "image/png", sizes: "144x144" },
+      { url: "/favicon.png", type: "image/png", sizes: "288x288" },
     ],
   },
 };
