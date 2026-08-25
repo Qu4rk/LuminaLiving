@@ -542,7 +542,17 @@ export default function Home() {
                 <Link href="/terms" className="footer-link" style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Terms</Link>
                 <Link href="/privacy" className="footer-link" style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Privacy</Link>
               </div>
-              <p className="footer-signature-text">Brought to life by <span className="quark-shimmer">QUARK</span></p>
+              <p className="footer-signature-text">
+                Brought to life by{' '}
+                <a
+                  href="https://qu4rk.github.io/QuarkMade/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="quark-link"
+                >
+                  <span className="quark-shimmer">QUARK</span>
+                </a>
+              </p>
             </div>
             <p className="disclaimer">
               Redefining coastal luxury. Every detail is curated for an exceptional living experience.

@@ -1348,6 +1348,21 @@ input, select, textarea { font-family: var(--font-body); }
     opacity: 0.8;
 }
 
+.quark-link {
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-color: rgba(238, 222, 168, 0.45);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.25s ease, opacity 0.25s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.quark-link:hover {
+    text-decoration-color: #eedea8;
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
 .quark-shimmer {
     background: linear-gradient(
         90deg,
