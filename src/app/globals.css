@@ -1349,44 +1349,65 @@ input, select, textarea { font-family: var(--font-body); }
 }
 
 .quark-link {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding-bottom: 1px;
     display: inline-block;
-    text-decoration: underline;
-    text-decoration-color: rgba(238, 222, 168, 0.45);
-    text-underline-offset: 3px;
-    transition: text-decoration-color 0.25s ease, opacity 0.25s ease, transform 0.2s ease;
     cursor: pointer;
+    transition: border-color 0.2s ease, opacity 0.2s ease;
 }
 
-.quark-link:hover {
-    text-decoration-color: #eedea8;
-    opacity: 1;
-    transform: translateY(-1px);
+.quark-link:hover,
+.quark-link:focus-visible {
+    color: inherit;
+    border-bottom-color: #ffffff;
+    outline: none;
 }
 
 .quark-shimmer {
-    background: linear-gradient(
-        90deg,
-        var(--text-muted) 0%,
-        var(--text-muted) 40%,
-        #eedea8 50%,
-        var(--text-muted) 60%,
-        var(--text-muted) 100%
-    );
-    background-size: 200% auto;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: goldShimmer 4s infinite linear;
+    position: relative;
     display: inline-block;
-    font-weight: 500;
+    color: inherit;
+    font-weight: 700;
 }
 
-@keyframes goldShimmer {
+.quark-shimmer::after {
+    position: absolute;
+    inset: 0;
+    content: attr(data-text);
+    pointer-events: none;
+    color: transparent;
+    background: linear-gradient(
+        110deg,
+        transparent 0%,
+        transparent 40%,
+        rgba(255, 255, 255, 0.95) 50%,
+        transparent 60%,
+        transparent 100%
+    );
+    background-position: 150% 0;
+    background-repeat: no-repeat;
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: quarkGlimmerSweep 5.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes quarkGlimmerSweep {
     0% {
-        background-position: 200% center;
+        background-position: 150% 0;
     }
-    100% {
-        background-position: -200% center;
+    70%, 100% {
+        background-position: -150% 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .quark-shimmer::after {
+        animation: none;
     }
 }
 

@@ -550,7 +550,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="quark-link"
                 >
-                  <span className="quark-shimmer">QUARK</span>
+                  <span className="quark-shimmer" data-text="QUARK">QUARK</span>
                 </a>
               </p>
             </div>
