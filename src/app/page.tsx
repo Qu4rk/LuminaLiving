@@ -310,7 +310,7 @@ export default function Home() {
             </HeroHighlight>
             <FeatureAccordion 
               items={[
-                { text: 'The Living Lounge', description: 'An expansive open-plan gathering space framed by coastal panoramas, proportioned for effortless conversation, slow afternoons, and quiet contemplation.', image: '/assets/feature_microclimate_1782852308980.webp' },
+                { text: 'The Living Lounge', description: 'An expansive open-plan gathering space framed by coastal panoramas, proportioned for effortless conversation, slow afternoons, and quiet contemplation.', image: '/assets/living_lounge.webp' },
                 { text: 'The Bath Sanctuary', description: 'Floor-to-ceiling veined Italian marble, bespoke brushed-copper fittings, and an open rain shower crafted for quiet rejuvenation.', image: '/assets/bathroom_suite.webp' },
                 { text: 'The Powder Room', description: 'Minimalist Italian sanitaryware, warm natural stone, and halo-lit circular mirror detailing designed for understated elegance on the lower level.', image: '/assets/downstairs_bathroom.webp' },
                 { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/assets/lightorchestration.webp' },
