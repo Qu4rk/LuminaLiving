@@ -311,6 +311,7 @@ export default function Home() {
             <FeatureAccordion 
               items={[
                 { text: 'The Living Lounge', description: 'An expansive open-plan gathering space framed by coastal panoramas, proportioned for effortless conversation, slow afternoons, and quiet contemplation.', image: '/assets/feature_microclimate_1782852308980.webp' },
+                { text: 'The Bath Sanctuary', description: 'Floor-to-ceiling veined Italian marble, bespoke brushed-copper fittings, and an open rain shower crafted for quiet rejuvenation.', image: '/assets/bathroom_suite.webp' },
                 { text: 'Acoustic Envelope', description: 'Acoustic-grade, multi-layered glass ensuring absolute tranquility and thermal perfection.', image: '/assets/feature_acoustic_envelope_1782852327696.webp' },
                 { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/assets/lightorchestration.webp' },
                 { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/assets/sensoryarchitecture.webp' }
