@@ -88,7 +88,9 @@ export default function Home() {
         body: JSON.stringify(Object.fromEntries(formData)),
       });
       
-      if (response.ok) {
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && data && (data.success === true || data.success === "true")) {
         setSubmitStatus('sent');
         form.reset();
         setTimeout(() => setSubmitStatus('idle'), 3000);
