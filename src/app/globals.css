@@ -636,8 +636,8 @@ input, select, textarea { font-family: var(--font-body); }
 }
 
 @media (max-width: 768px) {
-    .bathroom-img {
-        object-position: top center;
+    .curated-interior-img {
+        object-position: center center;
     }
 }
 

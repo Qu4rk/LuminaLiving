@@ -230,7 +230,17 @@ export default function Home() {
           {/* Feature 1: Image Left / Text Right */}
           <div className="feature-block">
             <div className="feature-image-wrap reveal-image">
-              <img loading="lazy" decoding="async" src="/assets/bathroom.webp" alt="Curated bathroom interior space" className="bathroom-img" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/assets/curated_interior.webp"
+                srcSet="/assets/curated_interior_400.webp 400w, /assets/curated_interior.webp 768w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                width={768}
+                height={1024}
+                alt="Curated interior dining and kitchen space"
+                className="curated-interior-img"
+              />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">Curated Interior Identity</h3>
@@ -246,7 +256,40 @@ export default function Home() {
           {/* Feature 2: Image Right / Text Left */}
           <div className="feature-block reversed">
             <div className="feature-image-wrap reveal-image">
-              <img loading="lazy" decoding="async" src="/assets/barista_station.webp" alt="A high-end luxury espresso machine and barista station" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/assets/bedroom_suite.webp"
+                srcSet="/assets/bedroom_suite_400.webp 400w, /assets/bedroom_suite.webp 768w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                width={768}
+                height={1024}
+                alt="The Horizon Suite master bedroom with floor-to-ceiling coastal view"
+              />
+            </div>
+            <div className="feature-text">
+              <h3 className="reveal-copy">The Horizon Suite</h3>
+              <p className="reveal-copy chillax-copy">
+                Positioned to welcome the first morning light over the palms and sea. Floor-to-ceiling glass
+                frames the coastal horizon, tempered by acoustic drapery, architectural cove illumination,
+                and tailored linens designed for effortless, deep recovery.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 3: Image Left / Text Right */}
+          <div className="feature-block">
+            <div className="feature-image-wrap reveal-image">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/assets/barista_station.webp"
+                srcSet="/assets/barista_station_400.webp 400w, /assets/barista_station.webp 768w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                width={768}
+                height={1024}
+                alt="A dedicated barista-grade espresso station with La Marzocco machine and coffee grinder"
+              />
             </div>
             <div className="feature-text">
               <h3 className="reveal-copy">The Ritual Corner</h3>
@@ -258,7 +301,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 3: Layered Comfort — four-system strata */}
+          {/* Feature 4: Layered Comfort — four-system strata */}
           <div className="feature-layered">
             <HeroHighlight containerClassName="py-0 h-auto bg-transparent mb-6 justify-start text-left items-start">
               <h3 className="relative z-10 m-0 reveal-copy">
@@ -267,7 +310,7 @@ export default function Home() {
             </HeroHighlight>
             <FeatureAccordion 
               items={[
-                { text: 'Microclimate', description: 'Precision temperature control across four independent zones for personalized comfort.', image: '/assets/feature_microclimate_1782852308980.webp' },
+                { text: 'The Living Lounge', description: 'An expansive open-plan gathering space framed by coastal panoramas, proportioned for effortless conversation, slow afternoons, and quiet contemplation.', image: '/assets/feature_microclimate_1782852308980.webp' },
                 { text: 'Acoustic Envelope', description: 'Acoustic-grade, multi-layered glass ensuring absolute tranquility and thermal perfection.', image: '/assets/feature_acoustic_envelope_1782852327696.webp' },
                 { text: 'Light Orchestration', description: 'Motorized blackout drapery paired with delicate light-filtering sheers for effortless mood lighting.', image: '/assets/lightorchestration.webp' },
                 { text: 'Sensory Architecture', description: 'Intuitive environmental architecture that seamlessly adapts to your presence and preferences.', image: '/assets/sensoryarchitecture.webp' }
